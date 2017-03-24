@@ -1,0 +1,280 @@
+﻿body {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.jumbotron {
+    margin-top: 50px;
+    color: #428bca;
+    padding: 0;
+    background-color: white;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/*-----------------------------------------------------------------
+------------------------ Ogólne klasy -----------------------------
+-----------------------------------------------------------------*/
+
+.modal-color_margintop {
+    margin-top: 10%;
+    color: #428bca;
+}
+
+.grey_font {
+    color: #777777;
+}
+
+.blue_font {
+    color: #428bca;
+}
+
+.main_header {
+    font-weight: 600;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+.labels_grey_right {
+    text-align: right;
+    color: #777777;
+}
+
+.details_panel {
+    margin-top: 100px;
+}
+
+.details_heading {
+    border-bottom-color: #428bca;
+    background-color: white; 
+    color: #777777;
+    padding: 0;
+} 
+    .details_heading > h4 {
+        font-weight: 600;
+        color: #777777;
+        padding: 0;
+    } 
+
+/*---------------------- Pasek scrolla --------------------------*/
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px #428bca;
+    box-shadow: inset 0 0 6px #428bca;
+    background-color: #8DB9DF;
+}
+    
+::-webkit-scrollbar {
+    -webkit-box-shadow: inset 0 0 6px #428bca;
+    box-shadow: inset 0 0 6px #428bca;
+    color: #428bca;
+}
+
+/*------- Table scrollable i clickable --------------------------*/
+
+.Row_Clicked, .Row_Clicked:hover {
+    color: white !important;
+    background-color: #428bca !important;
+}
+
+    table.tableSection {
+        color: #428bca;
+        display: table;
+        width: 100%;
+    }
+    table.tableSection thead, table.tableSection tbody {
+        float: left;
+        width: 100%;
+    }
+    /*table.tableSection thead {
+        padding-right: 17px;
+    }*/
+    table.tableSection tbody {
+        overflow: auto;
+        height: 570px;
+    }
+    table.tableSection tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+    table.tableSection th, table.tableSection td {
+        width: 70%;
+    }
+
+/*-------------- Kontrolka uploadu pliku --------------------------*/
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+/*-----------------------------------------------------------------
+----------------------- NAVIGATION --------------------------------
+-----------------------------------------------------------------*/
+
+.navbar {
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-color: #428bca;
+    color: #525252;
+    font-weight: 600;
+    background-color: white;
+}
+
+.nav {
+    margin-top: 3px;
+}
+
+.navbar-default .navbar-brand {
+    color: #525252;
+}
+    .navbar-default .navbar-brand:hover {
+        color: #428bca;
+    }
+
+.navbar-default .navbar-nav > li {
+    margin: 1px;
+    border-radius: 3px;
+    border: 1px solid transparent; 
+    color: #525252;
+}
+
+    .navbar-default .navbar-nav > li > a:hover {
+        color: #eeeeee;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+    }
+#navigation > li > .nav-item :hover {
+    color: #eeeeee;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.navbar-default .navbar-nav > li:hover {
+    color: #eeeeee;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#navigation > li:hover {
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    color: #eeeeee;
+    background-color: #428bca;
+    border: 1px solid #285e8e;
+}
+
+.navbar-default .navbar-nav > .active, 
+.navbar-default .navbar-nav > .active:hover,
+.navbar-default .navbar-nav > .active:focus {
+    border-radius: 3px;
+    border: 1px solid #428bca;
+    color: #428bca;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #1981D3;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: white;
+}
+
+.nav > li > span {
+    margin: 6px 0;
+    padding: 5px 0 5px 5px;
+    float: left;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 5px 10px 30px;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #428bca;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    
+    background-color: transparent;
+    border: #285e8e;
+}
+
+/*-----------------------------------------------------------------
+----------------------- Footer ------------------------------------
+-----------------------------------------------------------------*/
+    
+.footer {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-log {
+    float: right;
+}
+
+.footer-contact {
+    padding: 12px;
+    color: #525252;
+}
+
+.footer-icon {
+    margin-left: 20px;
+    margin-right: 5px;
+    top: 2px;
+}

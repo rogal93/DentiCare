@@ -1,0 +1,160 @@
+﻿@model DentiCare.Models.UserSettings.DisplayDetailsViewModel
+
+@{
+    ViewBag.Title = "Moje dane";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    bool isDoctor = ViewBag.IsDoctor;
+}
+
+<link href="~/Content/UserSettings/UserSettings.css" rel="stylesheet" />
+
+<div class="container">
+    <div id="div_userSettings" class="panel panel-default col-md-12 col-sm-12 col-xs-12">
+        <div class="panel-heading text-center">
+            <h3>@Model.PersonalDetails.FirstName @Model.PersonalDetails.LastName</h3>
+        </div>
+        <div class="panel-body">
+            <div class="text-center col-md-5 col-xs-12">
+                <img class="img-thumbnail" width="300" height="360" src="@Model.Photo" alt="profile_photo" />
+            </div>
+
+            <div class="panel panel-default col-md-6 col-xs-12">
+                <div class="panel-heading details_heading">
+                    <h4 class="text-center">@Html.LabelFor(m => m.AccountDetails)</h4>
+                </div>
+
+                <!--details for mobile-->
+                <div class="panel-body details_body hidden-lg hidden-md hidden-sm">
+                    <div class="col-xs-12" style="padding-bottom: 20px;">
+                        @Html.LabelFor(m => m.AccountDetails.Email, new { @class = "col-xs-12 control-label text-center grey_font" })
+                        <span class="col-xs-12 text-center">@Model.AccountDetails.Email</span>
+                    </div>
+                    <div class="col-xs-12" style="padding-bottom: 20px;">
+                        @Html.LabelFor(m => m.AccountDetails.PhoneNumber, new { @class = "col-xs-12 control-label text-center grey_font" })
+                        <span class="col-xs-12 text-center">@Model.AccountDetails.PhoneNumber</span>
+                    </div>
+                    <div class="col-xs-12" style="padding-bottom: 20px;">
+                        @Html.LabelFor(m => m.PersonalDetails.RegisterDate, new { @class = "col-xs-12 control-label text-center grey_font" })
+                        <span class="col-xs-12 text-center">@Model.PersonalDetails.RegisterDate.ToShortDateString()</span>
+                    </div>
+                    <div class="col-xs-12" style="padding-bottom: 20px;">
+                        @Html.LabelFor(m => m.PersonalDetails.Gender, new { @class = "col-xs-12 control-label text-center grey_font" })
+                        <span class="col-xs-12 text-center">@Model.PersonalDetails.Gender</span>
+                    </div>
+                    <div class="col-xs-12" style="padding-bottom: 20px;">
+                        @Html.LabelFor(m => m.AddressDetails.City, new { @class = "col-xs-12 control-label text-center grey_font" })
+                        <span class="col-xs-12 text-center">@Model.AddressDetails.City</span>
+                    </div>
+                    @if (!string.IsNullOrEmpty(Model.AddressDetails.Street))
+                    {
+                        <div class="col-xs-12" style="padding-bottom: 20px;">
+                            @Html.LabelFor(m => m.AddressDetails.Street, new { @class = "col-xs-12 control-label text-center grey_font" })
+                            <span class="col-xs-12 text-center">@Model.AddressDetails.Street</span>
+                        </div>
+                    }
+                    <div class="col-xs-12" style="padding-bottom: 20px;">
+                        @Html.LabelFor(m => m.AddressDetails.HouseNumber, new { @class = "col-xs-12 control-label text-center grey_font" })
+                        <span class="col-xs-12 text-center">@Model.AddressDetails.HouseNumber</span>
+                    </div>
+                    @if (!string.IsNullOrEmpty(Model.AddressDetails.ApartmentNumber))
+                    {
+                        <div class="col-xs-12" style="padding-bottom: 20px;">
+                            @Html.LabelFor(m => m.AddressDetails.ApartmentNumber, new { @class = "col-xs-12 control-label text-center grey_font" })
+                            <span class="col-xs-12 text-center">@Model.AddressDetails.ApartmentNumber</span>
+                        </div>
+                    }
+                    <div class="col-xs-12" style="padding-bottom: 20px;">
+                        @Html.LabelFor(m => m.AddressDetails.PostalCode, new { @class = "col-xs-12 control-label text-center grey_font" })
+                        <span class="col-xs-12 text-center">@Model.AddressDetails.PostalCode</span>
+                    </div>
+                    <div class="col-xs-12" style="padding-bottom: 20px;">
+                        @Html.LabelFor(m => m.AddressDetails.PostalCity, new { @class = "col-xs-12 control-label text-center grey_font" })
+                        <span class="col-xs-12 text-center">@Model.AddressDetails.PostalCity</span>
+                    </div>
+                </div>
+
+                <!--details for tablet, desktop-->
+                <div class="panel-body details_body hidden-xs">
+                    <div class="col-md-12 col-sm-12">
+                        @Html.LabelFor(m => m.AccountDetails.Email, new { @class = "col-md-5 col-sm-5 control-label labels_grey_right" })
+                        <span class="col-md-7 col-sm-7">@Model.AccountDetails.Email</span>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        @Html.LabelFor(m => m.AccountDetails.PhoneNumber, new { @class = "col-md-5 col-sm-5 control-label labels_grey_right" })
+                        <span class="col-md-7 col-sm-7">@Model.AccountDetails.PhoneNumber</span>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        @Html.LabelFor(m => m.PersonalDetails.RegisterDate, new { @class = "col-md-5 col-sm-5 control-label labels_grey_right" })
+                        <span class="col-md-7 col-sm-7">@Model.PersonalDetails.RegisterDate.ToShortDateString()</span>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        @Html.LabelFor(m => m.PersonalDetails.Gender, new { @class = "col-md-5 col-sm-5 control-label labels_grey_right" })
+                        <span class="col-md-7 col-sm-7">@Model.PersonalDetails.Gender</span>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        @Html.LabelFor(m => m.AddressDetails.City, new { @class = "col-md-5 col-sm-5 control-label labels_grey_right" })
+                        <span class="col-md-7 col-sm-7">@Model.AddressDetails.City</span>
+                    </div>
+                    @if (!string.IsNullOrEmpty(Model.AddressDetails.Street))
+                    {
+                        <div class="col-md-12 col-sm-12">
+                            @Html.LabelFor(m => m.AddressDetails.Street, new { @class = "col-md-5 col-sm-5 control-label labels_grey_right" })
+                            <span class="col-md-7 col-sm-7">@Model.AddressDetails.Street</span>
+                        </div>
+                    }
+                    <div class="col-md-12 col-sm-12">
+                        @Html.LabelFor(m => m.AddressDetails.HouseNumber, new { @class = "col-md-5 col-sm-5 control-label labels_grey_right" })
+                        <span class="col-md-7 col-sm-7">@Model.AddressDetails.HouseNumber</span>
+                    </div>
+                    @if (!string.IsNullOrEmpty(Model.AddressDetails.ApartmentNumber))
+                    {
+                        <div class="col-md-12 col-sm-12">
+                            @Html.LabelFor(m => m.AddressDetails.ApartmentNumber, new { @class = "col-md-5 col-sm-5 control-label labels_grey_right" })
+                            <span class="col-md-7 col-sm-7">@Model.AddressDetails.ApartmentNumber</span>
+                        </div>
+                    }
+                    <div class="col-md-12 col-sm-12">
+                        @Html.LabelFor(m => m.AddressDetails.PostalCode, new { @class = "col-md-5 col-sm-5 control-label labels_grey_right" })
+                        <span class="col-md-7 col-sm-7">@Model.AddressDetails.PostalCode</span>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        @Html.LabelFor(m => m.AddressDetails.PostalCity, new { @class = "col-md-5 col-sm-5 control-label labels_grey_right" })
+                        <span class="col-md-7 col-sm-7">@Model.AddressDetails.PostalCity</span>
+                    </div>
+                </div>
+            </div>
+
+            @if (isDoctor)
+            {
+                <div class="panel panel-default col-md-12">
+                    <div class="panel-heading details_heading">
+                        <h4 class="text-center">@Html.LabelFor(m => m.MedicalDetails)</h4>
+                    </div>
+                    <div class="panel-body details_body">
+
+                        <div class="col-md-12">
+                            @Html.LabelFor(m => m.MedicalDetails.University, new { @class = "col-md-5 control-label labels_grey_right" })
+                            @Model.MedicalDetails.University
+                        </div>
+                        <div class="col-md-12">
+                            @Html.LabelFor(m => m.MedicalDetails.GraduationDate, new { @class = "col-md-5 control-label labels_grey_right" })
+                            @Model.MedicalDetails.GraduationDate.ToShortDateString()
+                        </div>
+                        <div class="col-md-12">
+                            @Html.LabelFor(m => m.MedicalDetails.Specialization, new { @class = "col-md-5 control-label labels_grey_right" })
+                            @Model.MedicalDetails.Specialization
+                        </div>
+                        <div class="col-md-12">
+                            @Html.LabelFor(m => m.MedicalDetails.AboutMyself, new { @class = "col-md-5 control-label labels_grey_right" })
+                            @Model.MedicalDetails.AboutMyself
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Strona glowna";
+}
+
+<link href="~/Content/Account/Account.css" rel="stylesheet" />
+
+<div class="container">
+
+    @if (Request.IsAuthenticated)
+    {
+        <div class="container">
+            <!--jumbotron-->
+            <div class="jumbotron text-center">
+                <img src="~/Images/fluoridetooth.jpg" />
+                <h1 id="company">
+                    <span class="text-success">Pro</span>Denti<span class="text-success">Care</span>
+                </h1>
+                <p>Centrum stomatologiczne</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <!--modal do logowania-->
+        @Html.Partial("_LoginModalPartial")
+
+        <!--modal do rejestracji-->
+        @Html.Partial("_RegisterModalPartial")
+
+        <!--jumbotron-->
+        <div class="jumbotron text-center">
+            <img src="~/Images/fluoridetooth.jpg" />
+            <h1 id="company">
+                <span class="text-success">Pro</span>Denti<span class="text-success">Care</span>
+            </h1>
+            <p>Centrum stomatologiczne</p>
+            <p class="register-login-btns">
+                <button id="register_btn" class="btn btn3d btn-success btn-lg" data-toggle="modal" data-target="#modal_register">Rejestracja</button>
+                <button id="login_btn" class="btn btn3d btn-primary btn-lg" data-toggle="modal" data-target="#modal_login">Logowanie</button>
+            </p>
+        </div>
+    }
+</div>
+

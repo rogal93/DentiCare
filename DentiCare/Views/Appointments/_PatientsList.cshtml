@@ -1,0 +1,43 @@
+﻿@model List<DentiCare.Models.Appointments.UserNameWithIDs>
+
+<div class="panel-heading text-center">
+    <h3 style="margin-top: 10px; margin-bottom: 5px;">Pacjenci</h3>
+</div>
+<div class="panel-body" style="padding-bottom: 0;">
+    <table id="patients_table_id" class="table-striped patients_table table table-bordered table-hover" style="padding-bottom: 0;">
+        @if (Model.Count > 7)
+            {
+            <thead style="padding-right: 17px;">
+                <tr>
+                    <th class="text-center" style="width: 100%;">Imię i nazwisko</th>
+                </tr>
+            </thead>
+        }
+        else
+        {
+            <thead>
+                <tr>
+                    <th class="text-center" style="width: 100%;">Imię i nazwisko</th>
+                </tr>
+            </thead>
+        }
+        <tbody class="grey_font">
+            @foreach (var patient in Model)
+            {
+                <tr class="patients_table_row">
+                    <td class="text-center" style="width: 30%;">
+                        <input type="hidden" id="patientID" value="@patient.UserInfoID" />
+                        @patient.FullName
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="panel-footer"></div>
+
+<script>
+    $(document).ready(function () {
+        TableHoverPatients();
+    });
+</script>

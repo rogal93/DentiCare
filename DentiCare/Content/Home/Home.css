@@ -1,0 +1,92 @@
+﻿.header_contact_address, .header_contact_phone, .header_contact_mail {
+    font-size: 35px; 
+    font-weight: 600;
+    color: #777777; 
+}
+
+.header_contact_address {
+    margin-top: 10%;
+}
+
+.header_contact_phone, .header_contact_mail {
+    margin-top: 30px;
+}
+
+.jumbotron {
+    margin-top: 50px;
+    color: #428bca;
+    padding: 0;
+    background-color: white;
+}
+
+/*-----------------------------------------------------------------
+--------------------- Home\AllUsersForAssistant -------------------
+-----------------------------------------------------------------*/
+
+.users_panel {
+    border-color: #428bca;
+}
+    .users_panel > .panel-heading {
+        border-bottom-color: #428bca;
+        background-color: white; 
+        color: #777777;
+    } 
+        .users_panel > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+#users_table_id {
+    border-color: #428bca;
+}
+    #users_table_id > thead > tr > th {
+        border-bottom-color: #428bca; 
+        border-right-color: #428bca;
+    }
+
+.users_table_row {
+    color: #777777;
+}
+
+table.users_table {
+        border-color: #428bca;
+        color: #428bca;
+        display: table;
+        width: 100%;
+    }
+    table.users_table thead, table.users_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.users_table tbody {
+        overflow: auto;
+        height: 655px;
+    }
+    table.users_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+
+/* partial */
+
+#div_user_details {
+    margin-left: 10px;
+    border-color: #428bca;
+}
+    #div_user_details > .panel-heading {
+        background-color: white; 
+        color: #777777;
+        border-bottom-color: #777777;
+    }
+        #div_user_details > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+    #div_user_details > .panel-body > .panel-heading {
+        color: #428bca;
+        border-bottom-color: #777777;
+    }
+
+.details_panel {
+    margin-top: 10px;
+}

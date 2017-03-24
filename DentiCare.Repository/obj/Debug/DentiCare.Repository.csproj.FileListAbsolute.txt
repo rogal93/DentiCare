@@ -1,0 +1,430 @@
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\roslyn\csc.exe
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\roslyn\System.Collections.Immutable.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\roslyn\vbc.exe
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe.config
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\DentiCare.Repository.dll.config
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\DentiCare.Repository.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\DentiCare.Repository.pdb
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\EntityFramework.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\EntityFramework.SqlServer.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\Microsoft.Web.Infrastructure.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\System.Web.Helpers.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\System.Web.Mvc.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\System.Web.Razor.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\System.Web.WebPages.Deployment.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\System.Web.WebPages.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\System.Web.WebPages.Razor.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\EntityFramework.xml
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\EntityFramework.SqlServer.xml
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\System.Web.Helpers.xml
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\System.Web.Mvc.xml
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\System.Web.Razor.xml
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\System.Web.WebPages.xml
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\System.Web.WebPages.Deployment.xml
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\bin\System.Web.WebPages.Razor.xml
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\obj\Debug\DentiCare.Repository.csprojResolveAssemblyReference.cache
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\obj\Debug\DentiCare.Repository.dll
+c:\users\damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\obj\Debug\DentiCare.Repository.pdb
+C:\Users\Damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\obj\Debug\DentiCare.Repository.Migrations.Initial.resources
+C:\Users\Damian\documents\visual studio 2015\Projects\DentiCare\DentiCare.Repository\obj\Debug\DentiCare.Repository.csproj.GenerateResource.Cache
+E:\DentiCare Nowe\DentiCare.Repository\bin\roslyn\csc.exe
+E:\DentiCare Nowe\DentiCare.Repository\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\DentiCare Nowe\DentiCare.Repository\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\DentiCare Nowe\DentiCare.Repository\bin\roslyn\System.Collections.Immutable.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\roslyn\System.Reflection.Metadata.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\roslyn\vbc.exe
+E:\DentiCare Nowe\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe
+E:\DentiCare Nowe\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe.config
+E:\DentiCare Nowe\DentiCare.Repository\bin\DentiCare.Repository.dll.config
+E:\DentiCare Nowe\DentiCare.Repository\bin\DentiCare.Repository.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\DentiCare.Repository.pdb
+E:\DentiCare Nowe\DentiCare.Repository\bin\EntityFramework.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\EntityFramework.SqlServer.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\Microsoft.Web.Infrastructure.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\System.Web.Helpers.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\System.Web.Mvc.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\System.Web.Razor.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\System.Web.WebPages.Deployment.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\System.Web.WebPages.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\System.Web.WebPages.Razor.dll
+E:\DentiCare Nowe\DentiCare.Repository\bin\EntityFramework.xml
+E:\DentiCare Nowe\DentiCare.Repository\bin\EntityFramework.SqlServer.xml
+E:\DentiCare Nowe\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.xml
+E:\DentiCare Nowe\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DentiCare Nowe\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\DentiCare Nowe\DentiCare.Repository\bin\System.Web.Helpers.xml
+E:\DentiCare Nowe\DentiCare.Repository\bin\System.Web.Mvc.xml
+E:\DentiCare Nowe\DentiCare.Repository\bin\System.Web.Razor.xml
+E:\DentiCare Nowe\DentiCare.Repository\bin\System.Web.WebPages.xml
+E:\DentiCare Nowe\DentiCare.Repository\bin\System.Web.WebPages.Deployment.xml
+E:\DentiCare Nowe\DentiCare.Repository\bin\System.Web.WebPages.Razor.xml
+E:\DentiCare Nowe\DentiCare.Repository\obj\Debug\DentiCare.Repository.csprojResolveAssemblyReference.cache
+E:\DentiCare Nowe\DentiCare.Repository\obj\Debug\DentiCare.Repository.Migrations.Initial.resources
+E:\DentiCare Nowe\DentiCare.Repository\obj\Debug\DentiCare.Repository.csproj.GenerateResource.Cache
+E:\DentiCare Nowe\DentiCare.Repository\obj\Debug\DentiCare.Repository.dll
+E:\DentiCare Nowe\DentiCare.Repository\obj\Debug\DentiCare.Repository.pdb
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\roslyn\csc.exe
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\roslyn\vbc.exe
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\DentiCare.Repository.dll.config
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\DentiCare.Repository.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\DentiCare.Repository.pdb
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\EntityFramework.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\EntityFramework.SqlServer.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\System.Web.Helpers.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\System.Web.Mvc.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\System.Web.Razor.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\System.Web.WebPages.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\System.Web.WebPages.Razor.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\EntityFramework.xml
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\EntityFramework.SqlServer.xml
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\System.Web.Helpers.xml
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\System.Web.Mvc.xml
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\System.Web.Razor.xml
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\System.Web.WebPages.xml
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\bin\System.Web.WebPages.Razor.xml
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\obj\Debug\DentiCare.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\obj\Debug\DentiCare.Repository.dll
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\obj\Debug\DentiCare.Repository.pdb
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\obj\Debug\DentiCare.Repository.Migrations.Initial.resources
+C:\Users\Damian\Desktop\bucket\DentiCare.Repository\obj\Debug\DentiCare.Repository.csproj.GenerateResource.Cache
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\roslyn\csc.exe
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\roslyn\vbc.exe
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\DentiCare.Repository.dll.config
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\DentiCare.Repository.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\DentiCare.Repository.pdb
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\EntityFramework.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\EntityFramework.SqlServer.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\System.Web.Helpers.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\System.Web.Mvc.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\System.Web.Razor.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\System.Web.WebPages.Deployment.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\System.Web.WebPages.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\System.Web.WebPages.Razor.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\EntityFramework.xml
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\EntityFramework.SqlServer.xml
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\System.Web.Helpers.xml
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\System.Web.Mvc.xml
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\System.Web.Razor.xml
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\System.Web.WebPages.xml
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\System.Web.WebPages.Deployment.xml
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\bin\System.Web.WebPages.Razor.xml
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\obj\Debug\DentiCare.Repository.csprojResolveAssemblyReference.cache
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\obj\Debug\DentiCare.Repository.Migrations.Initial.resources
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\obj\Debug\DentiCare.Repository.csproj.GenerateResource.Cache
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\obj\Debug\DentiCare.Repository.dll
+C:\Users\d.roguski\DentiCare\DentiCare.Repository\obj\Debug\DentiCare.Repository.pdb
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\roslyn\csc.exe
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\roslyn\System.Collections.Immutable.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\roslyn\System.Reflection.Metadata.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\roslyn\vbc.exe
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe.config
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\DentiCare.Repository.dll.config
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\DentiCare.Repository.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\DentiCare.Repository.pdb
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\EntityFramework.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\EntityFramework.SqlServer.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\Microsoft.Web.Infrastructure.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\System.Web.Helpers.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\System.Web.Mvc.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\System.Web.Razor.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\System.Web.WebPages.Deployment.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\System.Web.WebPages.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\System.Web.WebPages.Razor.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\EntityFramework.xml
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\EntityFramework.SqlServer.xml
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.xml
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\System.Web.Helpers.xml
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\System.Web.Mvc.xml
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\System.Web.Razor.xml
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\System.Web.WebPages.xml
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\System.Web.WebPages.Deployment.xml
+E:\DentiCare\9-12 wersja\DentiCare.Repository\bin\System.Web.WebPages.Razor.xml
+E:\DentiCare\9-12 wersja\DentiCare.Repository\obj\Debug\DentiCare.Repository.csprojResolveAssemblyReference.cache
+E:\DentiCare\9-12 wersja\DentiCare.Repository\obj\Debug\DentiCare.Repository.Migrations.Initial.resources
+E:\DentiCare\9-12 wersja\DentiCare.Repository\obj\Debug\DentiCare.Repository.csproj.GenerateResource.Cache
+E:\DentiCare\9-12 wersja\DentiCare.Repository\obj\Debug\DentiCare.Repository.dll
+E:\DentiCare\9-12 wersja\DentiCare.Repository\obj\Debug\DentiCare.Repository.pdb
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\roslyn\csc.exe
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\roslyn\vbc.exe
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\DentiCare.Repository.dll.config
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\DentiCare.Repository.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\DentiCare.Repository.pdb
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\EntityFramework.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\EntityFramework.SqlServer.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\System.Web.Helpers.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\System.Web.Mvc.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\System.Web.Razor.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\System.Web.WebPages.Deployment.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\System.Web.WebPages.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\System.Web.WebPages.Razor.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\EntityFramework.xml
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\EntityFramework.SqlServer.xml
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\System.Web.Helpers.xml
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\System.Web.Mvc.xml
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\System.Web.Razor.xml
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\System.Web.WebPages.xml
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\System.Web.WebPages.Deployment.xml
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\bin\System.Web.WebPages.Razor.xml
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\obj\Debug\DentiCare.Repository.csprojResolveAssemblyReference.cache
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\obj\Debug\DentiCare.Repository.Migrations.Initial.resources
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\obj\Debug\DentiCare.Repository.csproj.GenerateResource.Cache
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\obj\Debug\DentiCare.Repository.dll
+C:\Users\d.roguski\denticare10.12\DentiCare.Repository\obj\Debug\DentiCare.Repository.pdb
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\roslyn\csc.exe
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\roslyn\System.Collections.Immutable.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\roslyn\System.Reflection.Metadata.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\roslyn\vbc.exe
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe.config
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\DentiCare.Repository.dll.config
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\DentiCare.Repository.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\DentiCare.Repository.pdb
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\EntityFramework.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\EntityFramework.SqlServer.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\Microsoft.Web.Infrastructure.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\System.Web.Helpers.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\System.Web.Mvc.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\System.Web.Razor.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\System.Web.WebPages.Deployment.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\System.Web.WebPages.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\System.Web.WebPages.Razor.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\EntityFramework.xml
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\EntityFramework.SqlServer.xml
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.xml
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\System.Web.Helpers.xml
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\System.Web.Mvc.xml
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\System.Web.Razor.xml
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\System.Web.WebPages.xml
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\System.Web.WebPages.Deployment.xml
+E:\DentiCare\11-12wersja\DentiCare.Repository\bin\System.Web.WebPages.Razor.xml
+E:\DentiCare\11-12wersja\DentiCare.Repository\obj\Debug\DentiCare.Repository.csprojResolveAssemblyReference.cache
+E:\DentiCare\11-12wersja\DentiCare.Repository\obj\Debug\DentiCare.Repository.Migrations.Initial.resources
+E:\DentiCare\11-12wersja\DentiCare.Repository\obj\Debug\DentiCare.Repository.csproj.GenerateResource.Cache
+E:\DentiCare\11-12wersja\DentiCare.Repository\obj\Debug\DentiCare.Repository.dll
+E:\DentiCare\11-12wersja\DentiCare.Repository\obj\Debug\DentiCare.Repository.pdb
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\roslyn\csc.exe
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\roslyn\System.Collections.Immutable.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\roslyn\System.Reflection.Metadata.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\roslyn\vbc.exe
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe.config
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\DentiCare.Repository.dll.config
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\DentiCare.Repository.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\DentiCare.Repository.pdb
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\EntityFramework.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\EntityFramework.SqlServer.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\Microsoft.Web.Infrastructure.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\System.Web.Helpers.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\System.Web.Mvc.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\System.Web.Razor.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\System.Web.WebPages.Deployment.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\System.Web.WebPages.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\System.Web.WebPages.Razor.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\EntityFramework.xml
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\EntityFramework.SqlServer.xml
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.xml
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\System.Web.Helpers.xml
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\System.Web.Mvc.xml
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\System.Web.Razor.xml
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\System.Web.WebPages.xml
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\System.Web.WebPages.Deployment.xml
+E:\DentiCare\denticare19.12\DentiCare.Repository\bin\System.Web.WebPages.Razor.xml
+E:\DentiCare\denticare19.12\DentiCare.Repository\obj\Debug\DentiCare.Repository.csprojResolveAssemblyReference.cache
+E:\DentiCare\denticare19.12\DentiCare.Repository\obj\Debug\DentiCare.Repository.Migrations.Initial.resources
+E:\DentiCare\denticare19.12\DentiCare.Repository\obj\Debug\DentiCare.Repository.csproj.GenerateResource.Cache
+E:\DentiCare\denticare19.12\DentiCare.Repository\obj\Debug\DentiCare.Repository.dll
+E:\DentiCare\denticare19.12\DentiCare.Repository\obj\Debug\DentiCare.Repository.pdb
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\csc.exe
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\System.Collections.Immutable.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\System.Reflection.Metadata.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\vbc.exe
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe.config
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\DentiCare.Repository.dll.config
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\DentiCare.Repository.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\DentiCare.Repository.pdb
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\EntityFramework.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\EntityFramework.SqlServer.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.Web.Infrastructure.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.Helpers.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.Mvc.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.Razor.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.WebPages.Deployment.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.WebPages.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.WebPages.Razor.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\EntityFramework.xml
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\EntityFramework.SqlServer.xml
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.xml
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.Helpers.xml
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.Mvc.xml
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.Razor.xml
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.WebPages.xml
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.WebPages.Deployment.xml
+E:\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.WebPages.Razor.xml
+E:\DentiCare\denti20.01.16\DentiCare.Repository\obj\Debug\DentiCare.Repository.csprojResolveAssemblyReference.cache
+E:\DentiCare\denti20.01.16\DentiCare.Repository\obj\Debug\DentiCare.Repository.Migrations.Initial.resources
+E:\DentiCare\denti20.01.16\DentiCare.Repository\obj\Debug\DentiCare.Repository.csproj.GenerateResource.Cache
+E:\DentiCare\denti20.01.16\DentiCare.Repository\obj\Debug\DentiCare.Repository.dll
+E:\DentiCare\denti20.01.16\DentiCare.Repository\obj\Debug\DentiCare.Repository.pdb
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\csc.exe
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\System.Collections.Immutable.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\System.Reflection.Metadata.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\vbc.exe
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\roslyn\VBCSCompiler.exe.config
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\DentiCare.Repository.dll.config
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\DentiCare.Repository.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\DentiCare.Repository.pdb
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\EntityFramework.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\EntityFramework.SqlServer.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.Web.Infrastructure.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.Helpers.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.Mvc.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.Razor.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.WebPages.Deployment.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.WebPages.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.WebPages.Razor.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\EntityFramework.xml
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\EntityFramework.SqlServer.xml
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.Helpers.xml
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.Mvc.xml
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.Razor.xml
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.WebPages.xml
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.WebPages.Deployment.xml
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\bin\System.Web.WebPages.Razor.xml
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\obj\Debug\DentiCare.Repository.csprojResolveAssemblyReference.cache
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\obj\Debug\DentiCare.Repository.Migrations.Initial.resources
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\obj\Debug\DentiCare.Repository.csproj.GenerateResource.Cache
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\obj\Debug\DentiCare.Repository.dll
+E:\Dane\DentiCare\denti20.01.16\DentiCare.Repository\obj\Debug\DentiCare.Repository.pdb

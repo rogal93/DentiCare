@@ -1,0 +1,73 @@
+﻿@model DentiCare.Models.Admin.TreatmentDetailsModel
+
+<div class="modal fade col-md-offset-3 col-md-6 modal-color_margintop" id="modal_admin_add_treatment">
+    @using (Ajax.BeginForm("AddTreatment", "Admin", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "div_treatments_list",
+            OnSuccess = "RefreshAlerts"
+        },
+        new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="modal-content">
+            <!--naglowek-->
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-toggle="modal" data-target="#modal_admin_add_treatment">&times;</button>
+                <h2 class="modal-title" style="">Dodawanie zabiegu</h2>
+            </div>
+            <!--tresc-->
+            <div class="modal-body">
+                <div class="panel panel-success col-md-12">
+                    <div class="panel-body">
+
+                        <div class="form-group">
+                            @Html.HiddenFor(m => m.TreatmentID)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Name, new { @class = "col-md-4 control-label" })
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Nazwa zabiegu" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Category, new { @class = "col-md-4 control-label" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(m => m.Category,
+                                        new SelectList(new List<string>
+                                        {
+                                            "Stomatologia zachowawcza",
+                                            "Endodoncja",
+                                            "Stomatologia dziecięca",
+                                            "Leczenie protetyczne",
+                                            "Konsultacje",
+                                            "Diagnostyka"
+                                        }),
+                                        new { @class = "form-control", placeholder = "Kategoria" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Price, new { @class = "col-md-4 control-label" })
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Price, new { @class = "form-control", placeholder = "Cena w zł" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4 col-md-offset-4">
+                                <button id="modal_add_treatment_btn" type="submit" class="btn btn-primary" data-dissmiss="modal">Dodaj</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    }
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#modal_add_treatment_btn").on('click', function () {
+            $("#modal_admin_add_treatment").modal('hide');
+        });
+    });
+</script>

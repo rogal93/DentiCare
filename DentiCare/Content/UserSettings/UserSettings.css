@@ -1,0 +1,21 @@
+﻿#div_userSettings {
+    margin-left: 10px;
+    border-color: #428bca;
+}
+    #div_userSettings > .panel-heading {
+        background-color: white;
+        border-bottom-color: #428bca;
+    }
+        #div_userSettings > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+    #div_userSettings > .panel-body {
+        color: #428bca;
+    }
+
+    .panel-default > .panel-heading {
+        background-color: white; 
+        color: #777777;
+        border-bottom-color: #777777;
+    }

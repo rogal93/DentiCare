@@ -1,0 +1,62 @@
+﻿@model DentiCare.Models.Schedules.DayState
+
+<div class="panel-body text-right">
+    <div class="col-md-12">
+        @if (Model.DayOff.HasValue)
+        {
+            if (Model.DayOff.Value)
+            {
+
+                <button id="add_hours_btn" type="button" class="btn btn-primary tooltipButton" data-toggle="modal" 
+                        data-target="#modal_schedule_add_hours" data-placement="top" title="Dodaj godziny pracy">
+                    <span class="glyphicon glyphicon-time"></span>
+                </button>
+                <button id="set_dayOff_btn" type="button" class="btn btn-success tooltipButton disabled" data-placement="top"
+                        title="Ustaw jako wolny">
+                    <span class="glyphicon glyphicon-home"></span>
+                </button>
+
+            }
+            else
+            {
+                <button id="add_hours_btn" type="button" class="btn btn-primary tooltipButton disabled" data-toggle="modal" 
+                        data-target="#modal_schedule_add_hours" data-placement="top" title="Dodaj godziny pracy">
+                    <span class="glyphicon glyphicon-time"></span>
+                </button>
+                <button id="set_dayOff_btn" type="button" class="btn btn-success tooltipButton" data-placement="top"
+                        title="Ustaw jako wolny">
+                    <span class="glyphicon glyphicon-home"></span>
+                </button>
+            }
+
+        }
+        else
+        {
+            <button id="add_hours_btn" type="button" class="btn btn-primary tooltipButton disabled" data-toggle="modal" 
+                    data-target="#modal_schedule_add_hours" data-placement="top" title="Dodaj godziny pracy">
+                <span class="glyphicon glyphicon-time"></span>
+            </button>
+            <button id="set_dayOff_btn" type="button" class="btn btn-success tooltipButton disabled" data-placement="top"
+                    title="Ustaw jako wolny">
+                <span class="glyphicon glyphicon-home"></span>
+            </button>
+        }
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(".tooltipButton").tooltip();
+
+        $("#set_dayOff_btn").on('click', function () {
+            if (!$(this).hasClass('disabled')) {
+                SetDayOff();
+            }
+        });
+
+        $("#add_hours_btn").on('click', function () {
+            if ($(this).hasClass('disabled')) {
+                return false;
+            }
+        });
+    });
+</script>

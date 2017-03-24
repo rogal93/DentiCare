@@ -1,0 +1,55 @@
+﻿@model List<DentiCare.Models.Appointments.AppointmentModel>
+
+@{
+    ViewBag.Title = "Historia pacjenta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Appointments/Appointments.css" rel="stylesheet" />
+
+<div class="container">
+    <h1 class="text-center text-primary col-md-12 main_header">Historia pacjenta</h1>
+
+    <table class="history_table table-striped table table-bordered table-hover">
+        @if (Model.Count > 11)
+        {
+            <thead style="padding-right: 17px;" class="blue_font">
+                <tr>
+                    <th class="text-center" style="width: 10%;">Data</th>
+                    <th class="text-center" style="width: 10%;">Godzina</th>
+                    <th class="text-center" style="width: 25%;">Stomatolog</th>
+                    <th class="text-center" style="width: 45%;">Komentarz</th>
+                    <th class="text-center" style="width: 10%;">Koszt</th>
+                </tr>
+            </thead>
+        }
+        else
+        {
+            <thead class="blue_font">
+                <tr>
+                    <th class="text-center" style="width: 10%;">Data</th>
+                    <th class="text-center" style="width: 10%;">Godzina</th>
+                    <th class="text-center" style="width: 25%;">Stomatolog</th>
+                    <th class="text-center" style="width: 45%;">Komentarz</th>
+                    <th class="text-center" style="width: 10%;">Koszt</th>
+                </tr>
+            </thead>
+        }
+        <tbody class="grey_font">
+            @foreach (var appointment in Model)
+            {
+                <tr class="free_terms_table_row">
+                    <td class="text-center" style="width: 10%;">
+                        <input type="hidden" id="appointmentID" value="@appointment.ID" />
+                        @appointment.Date.ToShortDateString()
+                    </td>
+                    <td class="text-center" style="width: 10%;">@appointment.Date.ToShortTimeString()</td>
+                    <td class="text-center" style="width: 25%;">@appointment.DoctorFullName</td>
+                    <td class="text-center" style="width: 45%;">@appointment.Comment</td>
+                    <td class="text-center" style="width: 10%;">@appointment.Price zł</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

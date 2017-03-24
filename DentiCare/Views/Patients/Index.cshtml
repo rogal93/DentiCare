@@ -1,0 +1,62 @@
+﻿@model DentiCare.Models.Patients.AllPatientsViewModel
+
+@{
+    ViewBag.Title = "Baza pacjentow";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Patients/Patients.css" rel="stylesheet" />
+
+<div class="container">
+    <h1 class="text-center text-primary col-md-12 main_header" style="margin-bottom: 20px;">Baza pacjentów</h1>
+
+    <div id="div_patientsList" class="panel panel-default col-md-4 patients_list_panel">
+        @Html.Partial("_PatientsList", Model.Patients)
+    </div>
+
+    <div id="div_patient_details" class="panel panel-default col-md-6 col-md-offset-1">
+        @Html.Partial("_PatientDetails", Model.Details)
+    </div>
+</div>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script>
+    $(document).ready(function () {
+
+    })
+
+    function TableHoverPatients() {
+        $(".patients_table .patients_table_row").on("click", function () {
+            var hasClass = $(this).hasClass("Row_Clicked");
+            if (!hasClass) {
+                $('.Row_Clicked').each(function () {
+                    $(this).removeClass('Row_Clicked');
+                });
+                $(this).addClass('Row_Clicked');
+
+                var patient = $(".Row_Clicked").find("#patientID").attr('value');
+
+                if (patient !== undefined) {
+                    $.ajax({
+                        url: '@Url.Action("ShowPatientDetails", "Patients")',
+                        type: "GET",
+                        cache: false,
+                        contentType: "application/html, charset=utf-8",
+                        dataType: "html",
+                        data: { Id: patient },
+                        success: function (result) {
+                            $('#div_patient_details').html(result);
+                        },
+                        beforeSend: function () {
+                            $("#loading_modal").modal('show');
+                        },
+                        complete: function () {
+                            $("#loading_modal").modal('hide');
+                        }
+                    });
+                }
+            }
+        });
+    }
+</script>
+

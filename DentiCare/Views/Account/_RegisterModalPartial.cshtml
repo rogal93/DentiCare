@@ -1,0 +1,149 @@
+﻿@model DentiCare.Models.RegisterViewModel
+
+<div class="modal fade col-md-offset-1 col-md-10" id="modal_register">
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="modal-content">
+            <!--naglowek-->
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-toggle="modal" data-target="#modal_register">&times;</button>
+                <h1 class="modal-title" style="font-weight: 600;">REJESTRACJA</h1>
+            </div>
+            <!--tresc-->
+            <div class="modal-body">
+                @Html.AntiForgeryToken()
+                <div class="col-md-6">
+                    <!--Dane do logowania-->
+                    <div id="user_fields" class="panel panel-success">
+                        <h3 class="text-center" style="font-weight: 600;">Dane do logowania</h3>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Email, new { @class = "col-md-3 col-sm-4 col-xs-3 text-right control-label" })
+                                <div class="col-md-9 col-sm-8 col-xs-9">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Twój adres mailowy" })
+                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger text-center col-md-11" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Password, new { @class = "col-md-3 col-sm-4 col-xs-3 text-right  control-label" })
+                                <div class="col-md-9 col-sm-8 col-xs-9">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Twoje hasło" })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger text-center col-md-11" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-3 col-sm-4 col-xs-3 text-right  control-label" })
+                                <div class="col-md-9 col-sm-8 col-xs-9">
+                                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Potwierdzenie hasła" })
+                                    @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger text-center col-md-11" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Dane kontaktowe-->
+                    <div id="personal_info" class="panel panel-success">
+                        <h3 class="text-center" style="font-weight: 600;">Dane personalne</h3>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.FirstName, new { @class = "col-md-3 col-sm-4 col-xs-3 text-right  control-label" })
+                                <div class="col-md-9 col-sm-8 col-xs-9">
+                                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", placeholder = "Twoje imię" })
+                                    @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger text-center col-md-11" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.LastName, new { @class = "col-md-3 col-sm-4 col-xs-3 text-right  control-label" })
+                                <div class="col-md-9 col-sm-8 col-xs-9">
+                                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "Twoje nazwisko" })
+                                    @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger text-center col-md-11" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Gender, new { @class = "col-md-3 col-sm-4 col-xs-3 text-right  control-label" })
+                                <div class="col-md-4 col-sm-8 col-xs-9">
+                                    @Html.DropDownListFor(m => m.Gender,
+                                        new SelectList(new List<string> { "Kobieta", "Mężczyzna" }),
+                                        new { @class = "form-control", placeholder = "Twoja płeć" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Dane adresowe-->
+                <div id="address_info" class="panel panel-success col-md-5">
+                    <h3 class="text-center" style="font-weight: 600;">Dane kontaktowe</h3>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.City, new { @class = "col-md-4 col-sm-4 col-xs-4 col-xs-4 text-right control-label" })
+                            <div class="col-md-8 col-sm-8 col-xs-8">
+                                @Html.TextBoxFor(m => m.City, new { @class = "form-control", placeholder = "Miejscowość" })
+                                @Html.ValidationMessageFor(m => m.City, "", new { @class = "text-danger text-center col-md-11" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.PostalCode, new { @class = "col-md-4 col-sm-4 col-xs-4 text-right  control-label" })
+                            <div class="col-md-4 col-sm-2 col-xs-5">
+                                @Html.TextBoxFor(m => m.PostalCode, new { @class = "form-control", placeholder = "00-000" })
+                            </div>
+                            <div class="col-md-9 col-md-offset-4">
+                                @Html.ValidationMessageFor(m => m.PostalCode, "", new { @class = "text-danger text-center col-md-11" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.PostalCity, new { @class = "col-md-4 col-sm-4 col-xs-4 text-right  control-label" })
+                            <div class="col-md-8 col-sm-8 col-xs-8">
+                                @Html.TextBoxFor(m => m.PostalCity, new { @class = "form-control", placeholder = "Miejscowość poczty" })
+                            </div>
+                            <div class="col-md-9 col-md-offset-4">
+                                @Html.ValidationMessageFor(m => m.PostalCity, "", new { @class = "text-danger text-center col-md-11" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Street, new { @class = "col-md-4 col-sm-4 col-xs-4 text-right  control-label" })
+                            <div class="col-md-8 col-sm-8 col-xs-8">
+                                @Html.TextBoxFor(m => m.Street, new { @class = "form-control", placeholder = "Ulica" })
+                                @Html.ValidationMessageFor(m => m.Street, "", new { @class = "text-danger text-center col-md-11" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.HouseNumber, new { @class = "col-md-4 col-sm-4 col-xs-4 text-right  control-label" })
+                            <div class="col-md-4 col-sm-3 col-xs-4">
+                                @Html.TextBoxFor(m => m.HouseNumber, new { @class = "form-control", placeholder = "Nr" })
+                            </div>
+                            <div class="col-md-9 col-md-offset-4">
+                                @Html.ValidationMessageFor(m => m.HouseNumber, "", new { @class = "text-danger text-center col-md-11" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.ApartmentNumber, new { @class = "col-md-4 col-sm-4 col-xs-4 text-right  control-label" })
+                            <div class="col-md-4 col-sm-3 col-xs-4">
+                                @Html.TextBoxFor(m => m.ApartmentNumber, new { @class = "form-control", placeholder = "Nr" })
+                            </div>
+                            <div class="col-md-9 col-md-offset-4">
+                                @Html.ValidationMessageFor(m => m.ApartmentNumber, "", new { @class = "text-danger text-center col-md-11" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-md-4 col-sm-4 col-xs-4 text-right  control-label" })
+                            <div class="col-md-5 col-sm-3 col-xs-6">
+                                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", placeholder = "000-000-000" })
+                            </div>
+                            <div class="col-md-9 col-md-offset-4">
+                                @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger text-center col-md-11" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="register_submit_col" class="panel col-md-5">
+                    <!--Submit button-->
+                    <button id="modal_register_btn" type="submit" class="btn btn-success btn-lg" data-dissmiss="modal">
+                        <span class="glyphicon glyphicon-check" style="margin-right: 10px;"></span>Zarejestruj
+                    </button>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    }
+</div>
+

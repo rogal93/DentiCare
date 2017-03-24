@@ -1,0 +1,57 @@
+﻿@model DentiCare.Models.LoginViewModel
+
+<div class="modal fade col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" id="modal_login">
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+        <div class="modal-content">
+            <!--naglowek-->
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-toggle="modal" data-target="#modal_login">&times;</button>
+                <h1 class="modal-title" style="font-weight: 600;">LOGOWANIE</h1>
+            </div>
+            <!--tresc-->
+            <div class="modal-body">
+                @Html.AntiForgeryToken()
+                <hr />
+                <div class="col-md-9 col-md-offset-3 col-sm-9 col-sm-offset-3 col-xs-9 col-xs-offset-3">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-3 col-sm-3 col-xs-3 text-right control-label" })
+                    <div class="col-md-9 col-sm-9 col-xs-9">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Twój adres mailowy" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-3 col-sm-3 col-xs-3 text-right control-label" })
+                    <div class="col-md-9 col-sm-9 col-xs-9">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Twoje hasło" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-8 col-md-offset-3 col-sm-8 col-sm-offset-3 col-xs-offset-3">
+                        <div class="checkbox" style="padding-left: 20px;">
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe, new { style = "font-weight: 600; padding-left: 0;" })
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-left: 20px;">
+                    @Html.ActionLink("Przypomnij mi hasło", "ForgotPassword")
+                </div>
+
+                <!--Submit button-->
+                <div class="modal-footer">
+                    <button id="modal_loginBtn" type="submit" class="btn btn-primary btn-lg" data-dissmiss="modal">
+                        <span class="glyphicon glyphicon-log-in" style="margin-right: 10px;"></span>Zaloguj
+                    </button>
+                </div>
+                    
+            </div>
+        </div>
+    }
+</div>
+

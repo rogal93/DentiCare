@@ -1,0 +1,52 @@
+﻿@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="dropdown hidden-xs" style="margin: 0 20px 0 0; padding: 0 10px 0 0;">
+            <a data-toggle="dropdown" data-target="#" href="">
+                <h4 style="margin-bottom: 0;">
+                    <span class="hidden-sm hidden-xs">@ViewBag.MyName</span>
+                    <span class="glyphicon glyphicon-cog" style="top: 3px;"></span>
+                    <img class="img-rounded" width="30" height="36" src="@ViewBag.MyPhoto"/>
+                    <span class="caret"></span>
+                </h4> 
+            </a>
+            <ul class="dropdown-menu" style="float: right; margin-top: 5px;">
+
+                <li class="text-center nav-item" style="margin-bottom: 20px;">
+                    <h4>
+                        @Html.ActionLink("Moje dane", "Index", "UserSettings")
+                    </h4>
+                </li>
+                <li class="text-center nav-item" style="margin-bottom: 20px;">
+                    <h4>
+                        @Html.ActionLink("Nowe hasło", "ChangePassword", "Manage")
+                    </h4>
+                </li>
+                <li class="text-center nav-item" style="margin-bottom: 20px;">
+                    <h4>
+                        @Html.ActionLink("Zmień adres", "ChangeAddress", "UserSettings")
+                    </h4>
+                </li>
+                <li class="text-center nav-item" style="margin-bottom: 20px;">
+                    <h4>
+                        @Html.ActionLink("Ustaw zdjęcie", "SetPhoto", "UserSettings")
+                    </h4>
+                </li>
+                @if (ViewBag.IsDoctor)
+                {
+                    <li class="text-center nav-item" style="margin-bottom: 20px;">
+                        <h4>
+                            @Html.ActionLink("Opis lekarza", "ChangeMedicalExperience", "UserSettings")
+                        </h4>
+                    </li>
+                }
+                <li class="divider"></li>
+                <li class="text-center nav-item">
+                    <button type="submit" class="btn btn-primary" style="width: 150px;">Wyloguj</button>
+                </li>
+            </ul>
+        </div>
+    }
+}

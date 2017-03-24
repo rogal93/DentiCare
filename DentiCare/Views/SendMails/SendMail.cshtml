@@ -1,0 +1,98 @@
+﻿@model DentiCare.Models.SendMails.MailViewModel
+
+@{
+    ViewBag.Title = "Wyslij maila";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/SendMails/SendMails.css" rel="stylesheet" />
+
+<div class="container">
+    <h1 class="text-center text-primary col-md-12" style="font-weight: 600;">Wyślij maila</h1>
+
+    <div style="margin-top: 100px;" class="grey_font">
+        <div id="div_users_list" class="panel panel-default col-md-5 users_panel">
+            @Html.Partial("_UsersList", Model.UserViews)
+        </div>
+
+        <div id="div_message" class="panel panel-default col-md-6 col-md-offset-1">
+            @Html.Partial("_Message", Model.Message)
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#send_btn").prop('disabled', true);
+
+        $("#send_btn").on('click', function () {
+            Send();
+        });
+
+        $("#Title").on('change keyup paste', function () {
+            if ($("#Title").val() !== "" && $("#Body").val() !== "") {
+                $("#send_btn").prop('disabled', false);
+            }
+            else {
+                $("#send_btn").prop('disabled', true);
+            }
+        });
+
+        $("#Body").on('change keyup paste', function () {
+            if ($("#Title").val() !== "" && $("#Body").val() !== "") {
+                $("#send_btn").prop('disabled', false);
+            }
+            else {
+                $("#send_btn").prop('disabled', true);
+            }
+        });
+    });
+
+    function Send() {
+        var receiverID = $(".Row_Clicked").find("#userID").attr('value');
+        var title = $("#Title").val();
+        var body = $("#Body").val();
+
+        if (receiverID !== undefined) {
+            $.ajax({
+                url: '@Url.Action("Send", "SendMails")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: {
+                    ReceiverID: receiverID,
+                    Title: title,
+                    Body: body
+                },
+                success: function (result) {
+                    $("#div_message").html(result);
+
+                    RefreshAlerts();
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+
+    function TableHoverUsers() {
+        $(".users_table .users_table_row").on("click", function () {
+            var hasClass = $(this).hasClass("Row_Clicked");
+            if (!hasClass) {
+                $('.Row_Clicked').each(function () {
+                    $(this).removeClass('Row_Clicked');
+                });
+                $(this).addClass('Row_Clicked');
+
+                if ($("#Title").val() !== "" && $("#Body").val() !== "") {
+                    $("#send_btn").prop('disabled', false);
+                }
+            }
+        });
+    }
+</script>
+

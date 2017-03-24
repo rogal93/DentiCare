@@ -1,0 +1,63 @@
+﻿@model List<DentiCare.Models.Schedules.ScheduleModel>
+
+<div class="panel-body">
+    <div class="table-responsive col-md-12">
+        <table id="my_schedules_table" class="table-striped doctor_schedules_table table table-bordered table-hover">
+            @if (Model.Count > 10)
+            {
+                <thead style="padding-right: 17px;">
+                    <tr>
+                        <th class="text-center" style="width: 30%;">Data</th>
+                        <th class="text-center" style="width: 30%;">Dzień tygodnia</th>
+                        <th class="text-center" style="width: 40%;">Godziny pracy</th>
+                    </tr>
+                </thead>
+            }
+            else
+            {
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width: 30%;">Data</th>
+                        <th class="text-center" style="width: 30%;">Dzień tygodnia</th>
+                        <th class="text-center" style="width: 40%;">Godziny pracy</th>
+                    </tr>
+                </thead>
+            }
+            <tbody class="grey_font">
+                @foreach (var schedule in Model)
+                {
+                    <tr class="schedules_table_row">
+                        <td class="text-center" style="width: 30%;">
+                            <input type="hidden" id="scheduleID" value="@schedule.ID" />
+                            <input type="hidden" id="DayIsOff" value="@schedule.DayOff" />
+                            @schedule.Date.ToShortDateString()
+                        </td>
+                        @switch (schedule.Date.DayOfWeek)
+                        {
+                            case DayOfWeek.Monday:
+                                <td class="text-center" style="width: 30%;">Poniedziałek</td> break;
+                            case DayOfWeek.Tuesday:
+                                <td class="text-center" style="width: 30%;">Wtorek</td> break;
+                            case DayOfWeek.Wednesday:
+                                <td class="text-center" style="width: 30%;">Środa</td> break;
+                            case DayOfWeek.Thursday:
+                                <td class="text-center" style="width: 30%;">Czwartek</td> break;
+                            case DayOfWeek.Friday:
+                                <td class="text-center" style="width: 30%;">Piątek</td> break;
+                            case DayOfWeek.Saturday:
+                                <td class="text-center" style="width: 30%;">Sobota</td> break;
+                        }
+                        @if (schedule.DayOff)
+                        {
+                            <td class="text-center" style="width: 40%;">Dzień wolny</td>
+                        }
+                        else
+                        {
+                            <td class="text-center" style="width: 40%;">@schedule.HourFrom.ToString():00 - @schedule.HourTo.ToString():00 </td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

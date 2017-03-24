@@ -1,0 +1,68 @@
+﻿@model DentiCare.Models.UserSettings.MedicalDetails
+
+@{
+    ViewBag.Title = "Zmień dane lekarza";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/UserSettings/UserSettings.css" rel="stylesheet" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/redmond/jquery-ui.css">
+
+<div class="container grey_font">
+
+    <h1 class="text-center text-primary col-md-12 main_header">@ViewBag.Title</h1>
+
+    <div style="margin-top: 100px;">
+        @using (Html.BeginForm("ChangeMedicalExperience", "UserSettings", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary("", new { @class = "text-danger col-md-4 col-md-offset-4" })
+
+            @Html.HiddenFor(m => m.MedicalID)
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.University, new { @class = "col-md-2 col-md-offset-3 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.University, new { @class = "form-control blue_font", placeholder = "Uniwersytet" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.GraduationDate, new { @class = "col-md-2 col-md-offset-3 control-label" })
+                <div class="col-md-2">
+                    @Html.TextBoxFor(m => m.GraduationDate, "{0:yyyy-MM-dd}", new { @class = "form-control blue_font datepicker" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Specialization, new { @class = "col-md-2 col-md-offset-3 control-label" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.Specialization, new { @class = "form-control blue_font", placeholder = "Specjalizacja" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.AboutMyself, new { @class = "col-md-2 col-md-offset-3 control-label" })
+                <div class="col-md-4">
+                    @Html.TextAreaFor(m => m.AboutMyself, new { @class = "form-control blue_font", placeholder = "O mnie" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-5 col-md-4">
+                    <button type="submit" class="btn btn-primary tooltipButton" data-placement="bottom" title="Zmień dane lekarza">
+                        <span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("tooltipButton").tooltip();
+
+        $('.datepicker').datepicker({
+            dateFormat: 'yy-mm-dd',
+            maxDate: '0'
+        }).val();
+    });
+</script>

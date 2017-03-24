@@ -1,0 +1,32 @@
+﻿@model List<DentiCare.Models.Appointments.AppointmentModel>
+
+<table id="booked_table_id" class="booked_table table-striped table table-bordered table-hover">
+    <thead class="blue_font">
+        <tr>
+            <th class="text-center" style="width: 30%;">Data</th>
+            <th class="text-center" style="width: 20%;">Godzina</th>
+            <th class="text-center" style="width: 50%;">Stomatolog</th>
+        </tr>
+    </thead>
+    <tbody class="grey_font">
+        @foreach (var appointment in Model)
+        {
+            <tr class="booked_table_row">
+                <td class="text-center" style="width: 30%;">
+                    <input type="hidden" id="appointmentID" value="@appointment.ID" />
+                    @appointment.Date.ToShortDateString()
+                </td>
+                <td class="text-center" style="width: 20%;">@appointment.Date.ToShortTimeString()</td>
+                <td class="text-center" style="width: 50%;">@appointment.DoctorFullName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $("#cancel_appointment_btn").prop('disabled', true);
+        TableHoverBookedTerms();
+    });
+</script>
+

@@ -1,0 +1,79 @@
+﻿@model List<DentiCare.Models.Admin.UserModel>
+
+<div class="panel-heading text-center">
+    <h3>Użytkownicy</h3>
+</div>
+<div class="panel-body">
+    <div class="table-responsive">
+        <table id="users_admin_table" class="table-striped users_table table table-bordered table-hover">
+            @if (Model.Count > 19)
+            {
+                <thead style="padding-right: 17px;">
+                    <tr>
+                        <th class="text-center" style="width: 10%"></th>
+                        <th class="text-center" style="width: 30%">Rola</th>
+                        <th class="text-center" style="width: 60%">Imię i nazwisko</th>
+                    </tr>
+                </thead>
+            }
+            else
+            {
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width: 10%"></th>
+                        <th class="text-center" style="width: 30%">Rola</th>
+                        <th class="text-center" style="width: 60%">Imię i nazwisko</th>
+                    </tr>
+                </thead>
+            }
+            <tbody>
+                    @foreach (var user in Model)
+                    {
+                        switch (user.Role)
+                        {
+                            case "Asystentka":
+                                <tr class="users_table_row" style="color: blueviolet;">
+                                    <td class="text-center" style="width: 10%"><span class="glyphicon glyphicon-user"></span></td>
+                                    <td class="text-center" style="width: 30%">@user.Role</td>
+                                    <td class="text-center" style="width: 60%">
+                                        <input type="hidden" id="userID" value="@user.ID" />
+                                        <input type="hidden" id="userRole" value="@user.Role" />
+                                        @user.FirstName @user.LastName
+                                    </td>
+                                </tr>
+                                break;
+                            case "Stomatolog":
+                                <tr class="users_table_row" style="color: indianred;">
+                                    <td class="text-center" style="width: 10%"><span class="glyphicon glyphicon-user"></span></td>
+                                    <td class="text-center" style="width: 30%">@user.Role</td>
+                                    <td class="text-center" style="width: 60%">
+                                        <input type="hidden" id="userID" value="@user.ID" />
+                                        <input type="hidden" id="userRole" value="@user.Role" />
+                                        @user.FirstName @user.LastName
+                                    </td>
+                                </tr>
+                                break;
+                            case "Pacjent":
+                                <tr class="users_table_row" style="color: darkseagreen;">
+                                    <td class="text-center" style="width: 10%"><span class="glyphicon glyphicon-user"></span></td>
+                                    <td class="text-center" style="width: 30%">@user.Role</td>
+                                    <td class="text-center" style="width: 60%">
+                                        <input type="hidden" id="userID" value="@user.ID" />
+                                        <input type="hidden" id="userRole" value="@user.Role" />
+                                        @user.FirstName @user.LastName
+                                    </td>
+                                </tr>
+                                break;
+                        }
+                    }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        TableHoverAdminUsers();
+    });
+</script>
+

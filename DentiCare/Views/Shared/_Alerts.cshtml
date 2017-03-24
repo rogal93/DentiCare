@@ -1,0 +1,21 @@
+﻿
+
+@if (TempData["Success"] != null)
+            {
+    <div class="alert alert-success text-center col-md-6 col-md-offset-3">
+        @TempData["Success"].ToString()
+    </div>
+}
+@if (TempData["Warning"] != null)
+            {
+    <div class="alert alert-danger text-center col-md-6 col-md-offset-3">
+        @TempData["Warning"].ToString()
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        $(".alert-success").fadeOut(10000);
+        $(".alert-danger").fadeOut(10000);
+    });
+</script>

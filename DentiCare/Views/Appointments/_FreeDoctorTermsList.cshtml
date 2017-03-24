@@ -1,0 +1,76 @@
+﻿@model List<DentiCare.Models.Appointments.FreeTerm>
+
+<div class="panel-heading text-center">
+    <h3 style="margin-top: 10px; margin-bottom: 5px;">Wolne terminy</h3>
+</div>
+<div class="panel-body" style="padding-bottom: 0;">
+    <table id="free_terms_table_id" class="table-striped free_terms_table table table-bordered table-hover" style="padding-bottom: 0;">
+        @if (Model.Count > 7)
+            {
+            <thead style="padding-right: 17px;">
+                <tr>
+                    <th class="text-center" style="width: 30%;">Data</th>
+                    <th class="text-center" style="width: 40%;">Dzień tygodnia</th>
+                    <th class="text-center" style="width: 30%;">Godzina</th>
+                </tr>
+            </thead>
+        }
+        else
+        {
+            <thead>
+                <tr>
+                    <th class="text-center" style="width: 30%;">Data</th>
+                    <th class="text-center" style="width: 40%;">Dzień tygodnia</th>
+                    <th class="text-center" style="width: 30%;">Godzina</th>
+                </tr>
+            </thead>
+        }
+        <tbody class="grey_font">
+            @foreach (var term in Model)
+            {
+                <tr class="free_terms_table_row">
+                    <td class="text-center" style="width: 30%;">
+                        <input type="hidden" id="scheduleID" value="@term.ScheduleID" />
+                        <input type="hidden" id="hour" value="@term.Hour" />
+                        @term.Date.ToShortDateString()
+                    </td>
+                    @switch (term.DayOfWeek)
+                    {
+                        case DayOfWeek.Monday:
+                            <td class="text-center" style="width: 40%;">Poniedziałek</td> break;
+                        case DayOfWeek.Tuesday:
+                            <td class="text-center" style="width: 40%;">Wtorek</td> break;
+                        case DayOfWeek.Wednesday:
+                            <td class="text-center" style="width: 40%;">Środa</td> break;
+                        case DayOfWeek.Thursday:
+                            <td class="text-center" style="width: 40%;">Czwartek</td> break;
+                        case DayOfWeek.Friday:
+                            <td class="text-center" style="width: 40%;">Piątek</td> break;
+                        case DayOfWeek.Saturday:
+                            <td class="text-center" style="width: 40%;">Sobota</td> break;
+                    }
+                    <td class="text-center" style="width: 30%;">@term.Hour:00</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="panel-footer free_terms_panel-footer">
+    <button id="arrange_appointment_btn" class="btn btn-primary btn-lg col-md-12" style="margin-bottom: 18px;">
+        <span class="glyphicon glyphicon-ok" style="float: left;"></span>Zaaranżuj
+    </button>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#arrange_appointment_btn").prop('disabled', true);
+        TableHoverFreeTerms();
+
+        $("#arrange_appointment_btn").on('click', function (e) {
+            e.preventDefault();
+            Arrange();
+            $("#arrange_appointment_btn").prop('disabled', true);
+        });
+    });
+</script>
+

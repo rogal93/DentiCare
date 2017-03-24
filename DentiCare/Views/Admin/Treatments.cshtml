@@ -1,0 +1,111 @@
+﻿@model DentiCare.Models.Admin.DisplayTreatmentsViewModel
+
+@{
+    ViewBag.Title = "Baza zabiegow";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Admin/Admin.css" rel="stylesheet" />
+
+<div class="container admin_container">
+    <div id="modal_add_treatment_container">
+        <!--modal do dodania zabiegu-->
+        @Html.Partial("_AddTreatmentModalPartial", Model.Empty)
+
+        <!--modal do edycji zabiegu-->
+        <div id="div_edit_treatment">
+            @Html.Partial("_EditTreatmentModalPartial", Model.Details)
+        </div>
+    </div>
+    
+    <div id="div_treatments_list" class="panel panel-default col-md-12 admin_treatments_panel">
+        @Html.Partial("_TreatmentsList", Model.TreatmentViews)
+    </div>
+</div>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+<script>
+    function DeleteTreatment() {
+        var treatmentID = $(".Row_Clicked").find("#treatmentID").attr('value');
+
+        if (treatmentID !== undefined) {
+            $.ajax({
+                url: '@Url.Action("DeleteTreatment", "Admin")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: { Id: treatmentID },
+                success: function (result) {
+                    $("#div_treatments_list").html(result);
+                    RefreshAlerts();
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+
+    function RefreshTreatmentsList() {
+        $.ajax({
+            url: '@Url.Action("RefreshTreatmentsList", "Admin")',
+            type: "GET",
+            cache: false,
+            contentType: "application/html, charset=utf-8",
+            dataType: "html",
+            data: {},
+            success: function (result) {
+                $("#div_treatments_list").html(result);
+                RefreshAlerts();
+            },
+            beforeSend: function () {
+                $("#loading_modal").modal('show');
+            },
+            complete: function () {
+                $("#loading_modal").modal('hide');
+            }
+        });
+    }
+
+    function TableHoverAdminTreatments() {
+        $(".treatments_table .treatments_table_row").on("click", function () {
+            var hasClass = $(this).hasClass("Row_Clicked");
+            if (!hasClass) {
+                $('.Row_Clicked').each(function () {
+                    $(this).removeClass('Row_Clicked');
+                });
+                $(this).addClass('Row_Clicked');
+
+                var treatmentID = $(".Row_Clicked").find("#treatmentID").attr('value');
+
+                $(".edit_treatment_btn").prop('disabled', false);
+                $(".delete_treatment_btn").prop('disabled', false);
+
+                $.ajax({
+                    url: '@Url.Action("ShowTreatmentDetails", "Admin")',
+                    type: "GET",
+                    cache: false,
+                    contentType: "application/html, charset=utf-8",
+                    dataType: "html",
+                    data: { Id: treatmentID },
+                    success: function (result) {
+                        $("#div_edit_treatment").html(result);
+                        RefreshAlerts();
+                    },
+                    beforeSend: function () {
+                        $("#loading_modal").modal('show');
+                    },
+                    complete: function () {
+                        $("#loading_modal").modal('hide');
+                    }
+                });
+            }
+        });
+    }
+</script>
+

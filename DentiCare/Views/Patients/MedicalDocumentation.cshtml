@@ -1,0 +1,126 @@
+﻿@model DentiCare.Models.Patients.MedicalDocumentationViewModel
+
+@{
+    ViewBag.Title = "Dokumentacja";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Patients/Patients.css" rel="stylesheet" />
+
+<div class="container">
+    <h1 class="text-center text-primary col-md-12 main_header" style="margin-bottom: 20px;">Baza pacjentów</h1>
+
+    <div id="div_patientsList" class="panel panel-default col-md-4 patients_list_panel">
+        @Html.Partial("_PatientsList", Model.Patients)
+    </div>
+
+    <div id="div_patient_documents" class="panel panel-default col-md-7 col-md-offset-1 patient_documents_panel">
+        @Html.Partial("_PatientDocuments", Model.PatientDocuments)
+    </div>
+</div>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script>
+    function DeleteDocument() {
+        var doc = $(".Document_Clicked").find("#documentID").attr('value');
+
+        if (doc !== undefined) {
+            $.ajax({
+                url: '@Url.Action("DeleteDocument", "Patients")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: { Id: doc },
+                success: function (result) {
+                    $('#div_patient_documents').html(result);
+
+                    $("#add_document_btn").prop('disabled', false);
+
+                    RefreshAlerts();
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+
+    function TableHoverPatients() {
+        $(".patients_table .patients_table_row").on("click", function () {
+            var hasClass = $(this).hasClass("Row_Clicked");
+            if (!hasClass) {
+                $('.Row_Clicked').each(function () {
+                    $(this).removeClass('Row_Clicked');
+                });
+                $(this).addClass('Row_Clicked');
+
+                var patient = $(".Row_Clicked").find("#patientID").attr('value');
+
+                if (patient !== undefined) {
+                    $.ajax({
+                        url: '@Url.Action("ShowPatientDocuments", "Patients")',
+                        type: "GET",
+                        cache: false,
+                        contentType: "application/html, charset=utf-8",
+                        dataType: "html",
+                        data: { Id: patient },
+                        success: function (result) {
+                            $('#div_patient_documents').html(result);
+
+                            $("#add_document_btn").prop('disabled', false);
+                        },
+                        beforeSend: function () {
+                            $("#loading_modal").modal('show');
+                        },
+                        complete: function () {
+                            $("#loading_modal").modal('hide');
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+    function TableHoverDocuments() {
+        $(".documents_table .documents_table_row").on("click", function () {
+            var hasClass = $(this).hasClass("Document_Clicked");
+            if (!hasClass) {
+                $('.Document_Clicked').each(function () {
+                    $(this).removeClass('Document_Clicked');
+                });
+                $(this).addClass('Document_Clicked');
+
+                $("#delete_document_btn").prop('disabled', false);
+
+                var doc = $(".Document_Clicked").find("#documentID").attr('value');
+
+                if (doc !== undefined) {
+                    $.ajax({
+                        url: '@Url.Action("RefreshDownloadButton", "Patients")',
+                        type: "GET",
+                        cache: false,
+                        contentType: "application/html, charset=utf-8",
+                        dataType: "html",
+                        data: { Id: doc },
+                        success: function (result) {
+                            $('#div_download').html(result);
+
+                            $("#download_document_btn").prop('disabled', false);
+                        },
+                        beforeSend: function () {
+                            $("#loading_modal").modal('show');
+                        },
+                        complete: function () {
+                            $("#loading_modal").modal('hide');
+                        }
+                    });
+                }
+            }
+        });
+    }
+</script>
+

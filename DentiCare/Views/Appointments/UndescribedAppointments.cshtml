@@ -1,0 +1,90 @@
+﻿@model DentiCare.Models.Appointments.UndescribedViewModel
+
+@{
+    ViewBag.Title = "Opisz wizyte";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Appointments/Appointments.css" rel="stylesheet" />
+
+<div class="container">
+    <h1 class="text-center text-primary col-md-12 main_header">Nieopisane wizyty</h1>
+
+    <div class="panel panel-default col-md-6" id="panel_booked_table" style="margin-top: 30px;">
+        <div class="panel-body">
+            <div id="div_booked_table" class="table-responsive col-md-12">
+                @Html.Partial("_UndescribedList", Model.Undescribed)
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default col-md-5 col-md-offset-1" id="panel_undescribed_details" style="margin-top: 30px;">
+        <div class="panel-body">
+            <div id="div_undescribed_details" class="table-responsive col-md-12">
+                @Html.Partial("_UndescribedDetails", Model.Details)
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script>
+    $(document).ready(function () {
+    })
+
+    function RefreshUndescribedDetails() {
+        $.ajax({
+            url: '@Url.Action("RefreshUndescribedDetails", "Appointments")',
+            type: "GET",
+            cache: false,
+            contentType: "application/html, charset=utf-8",
+            dataType: "html",
+            data: {},
+            success: function (result) {
+                $("#div_undescribed_details").html(result);
+                RefreshAlerts();
+            },
+            beforeSend: function () {
+                $("#loading_modal").modal('show');
+            },
+            complete: function () {
+                $("#loading_modal").modal('hide');
+            }
+        });
+    }
+
+    function TableHoverUndescribed() {
+        $(".undescribed_table .undescribed_table_row").on("click", function () {
+            var hasClass = $(this).hasClass("Row_Clicked");
+            if (!hasClass) {
+                $('.Row_Clicked').each(function () {
+                    $(this).removeClass('Row_Clicked');
+                });
+                $(this).addClass('Row_Clicked');
+
+                var appointmentID = $(".Row_Clicked").find("#appointmentID").attr('value');
+
+                if (appointmentID !== undefined) {
+                    $.ajax({
+                        url: '@Url.Action("ShowUndescribedDetails", "Appointments")',
+                        type: "GET",
+                        cache: false,
+                        contentType: "application/html, charset=utf-8",
+                        dataType: "html",
+                        data: { Id: appointmentID, },
+                        success: function (result) {
+                            $('#div_undescribed_details').html(result);
+                        },
+                        beforeSend: function () {
+                            $("#loading_modal").modal('show');
+                        },
+                        complete: function () {
+                            $("#loading_modal").modal('hide');
+                        }
+                    });
+                }
+            }
+        });
+    }
+</script>
+

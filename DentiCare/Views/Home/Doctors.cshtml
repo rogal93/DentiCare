@@ -1,0 +1,99 @@
+﻿@model List<DentiCare.Models.Schedules.DoctorInfo>
+
+@{
+    ViewBag.Title = "Lekarze";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1 class="text-center text-primary" style="font-weight: 600;">Kadra stomatologiczna</h1>
+    <div style="margin-top: 50px;">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active hidden"></li>
+                <li data-target="#myCarousel" data-slide-to="1" class="hidden"></li>
+                <li data-target="#myCarousel" data-slide-to="2" class="hidden"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                        @foreach (var doctor in Model)
+                        {
+                            if (Model.First() == doctor)
+                            {
+                                <div class="item active col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <img class="img-rounded" width="300" height="250" src="@doctor.Photo" alt="zdjecie" style="display: block; margin: 0 auto;" />
+
+                                    <div class="panel panel-default" style="margin-top: 20px;">
+                                        <div class="panel-heading text-center">
+                                            <h3 class="blue_font" style="font-weight: 600;">@doctor.FullName</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <span class="grey_font col-md-4 col-sm-4 col-xs-6 text-right">Ukończona uczelnia: </span>
+                                                <span class="blue_font col-md-8 col-sm-8 col-xs-6 text-left">@doctor.University</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <span class="grey_font col-md-4 col-sm-4 col-xs-6 text-right">Rok ukończenia: </span>
+                                                <span class="blue_font col-md-8 col-sm-8 col-xs-6 text-left">@doctor.GraduationDate.Year</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <span class="grey_font col-md-4 col-sm-4 col-xs-6 text-right">Specjalizacja: </span>
+                                                <span class="blue_font col-md-8 col-sm-8 col-xs-6 text-left">@doctor.Specialization</span>
+                                            </div>
+                                            <div class="form-group" style="margin-bottom: 50px;">
+                                                <span class="grey_font col-md-4 col-sm-4 col-xs-6 text-right">O mnie: </span>
+                                                <span class="blue_font col-md-8 col-sm-8 col-xs-6 text-left">@doctor.AboutMyself</span>
+                                            </div>
+                                        </div>
+                                        <div class="panel-footer"></div>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="item col-md-6 col-md-offset-3">
+                                    <img class="img-rounded" width="300" height="250" src="@doctor.Photo" alt="zdjecie" style="display: block; margin: 0 auto;" />
+
+                                    <div class="panel panel-default" style="margin-top: 20px;">
+                                        <div class="panel-heading text-center">
+                                            <h3 class="blue_font" style="font-weight: 600;">@doctor.FullName</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <span class="grey_font col-md-4 text-right">Ukończona uczelnia: </span>
+                                                <span class="blue_font col-md-8 text-left">@doctor.University</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <span class="grey_font col-md-4 text-right">Rok ukończenia: </span>
+                                                <span class="blue_font col-md-8 text-left">@doctor.GraduationDate.Year</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <span class="grey_font col-md-4 text-right">Specjalizacja: </span>
+                                                <span class="blue_font col-md-8 text-left">@doctor.Specialization</span>
+                                            </div>
+                                            <div class="form-group" style="margin-bottom: 50px;">
+                                                <span class="grey_font col-md-4 text-right">O mnie: </span>
+                                                <span class="blue_font col-md-8 text-left">@doctor.AboutMyself</span>
+                                            </div>
+                                        </div>
+                                        <div class="panel-footer"></div>
+                                    </div>
+                                </div>
+                            }
+                        }
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="color: #428bca; background-image: none;">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="color: #428bca; background-image: none;">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+

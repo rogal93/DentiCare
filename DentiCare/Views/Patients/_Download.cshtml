@@ -1,0 +1,9 @@
+﻿@model DentiCare.Models.Patients.DownloadModel
+
+@using (Html.BeginForm("DownloadDocument", "Patients", FormMethod.Get, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m => m.DocumentID)
+    <button id="download_document_btn" style="float: right;" type="submit" class="btn btn-warning tooltipButton" data-placement="top" title="Pobierz dokument">
+        <span class="glyphicon glyphicon-download-alt"></span>
+    </button>
+}

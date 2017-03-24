@@ -1,0 +1,25 @@
+﻿@model DentiCare.Models.Appointments.DoctorDetails
+
+<div class="panel-body blue_font">
+    <div class="text-center">
+        <img class="img-thumbnail img-rounded" width="250" height="300" src="@Model.Photo" alt="profile_photo" />
+    </div>
+
+    <div class="col-md-12" style="margin-top: 20px;">
+        @Html.LabelFor(m => m.University, new { @class = "col-md-5 control-label labels_grey_right" })
+        @Model.University
+    </div>
+    <div class="col-md-12">
+        @Html.LabelFor(m => m.GraduationDate, new { @class = "col-md-5 control-label labels_grey_right" })
+        @Model.GraduationDate.ToShortDateString()
+    </div>
+    <div class="col-md-12">
+        @Html.LabelFor(m => m.Specialization, new { @class = "col-md-5 control-label labels_grey_right" })
+        @Model.Specialization
+    </div>
+    <div class="col-md-12">
+        @Html.LabelFor(m => m.AboutMyself, new { @class = "col-md-5 control-label labels_grey_right" })
+        @Model.AboutMyself
+    </div>
+</div>
+

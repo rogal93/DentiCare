@@ -1,0 +1,54 @@
+﻿@model DentiCare.Models.Appointments.TodayVisitsViewModel
+
+@{
+    ViewBag.Title = "Wizyty dzisiejsze";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Appointments/Appointments.css" rel="stylesheet" />
+
+<div class="container">
+    <h1 class="text-center text-primary col-md-12 main_header">Dzisiejsze wizyty</h1>
+
+    <div class="form-group col-md-12 text-center" style="margin-top: 20px;">
+        @Html.LabelFor(m => m.DoctorsIDsNames, new { @class = "control-label col-md-5 text-right grey_font", style = "padding-top: 7px;" })
+        @Html.DropDownListFor(m => m.DoctorsIDsNames, new SelectList(Model.DoctorsIDsNames, "Key", "Value"), new { @class = "form-control col-md-7 text-center text-primary blue_font" })
+    </div>
+
+    <div id="div_todayList" class="panel panel-default col-md-8 col-md-offset-2 today_panel">
+        @Html.Partial("_TodayVisitsList", Model.Appointments)
+    </div>
+</div>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#DoctorsIDsNames").change(function () {
+            RefreshTodayVisitsList();
+        });
+    })
+
+    function RefreshTodayVisitsList() {
+        var userID = $("#DoctorsIDsNames").val();
+
+        if (userID !== undefined) {
+            $.ajax({
+                url: '@Url.Action("RefreshTodayVisitsList", "Appointments")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: { Id: userID },
+                success: function (result) {
+                    $('#div_todayList').html(result);
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+</script>

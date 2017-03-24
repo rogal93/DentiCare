@@ -1,0 +1,74 @@
+﻿@model DentiCare.Models.Patients.PatientDocumentsViewModel
+
+@Html.Partial("_AddDocumentModal", Model.NewDocument)
+
+<div class="panel-heading text-center">
+    <h3>Dokumenty medyczne</h3>
+</div>
+<div class="panel-body">
+    <div class="col-md-12">
+        <button id="add_document_btn" style="float: left;" type="button" class="btn btn-primary tooltipButton"
+                data-placement="top" title="Dodaj nowy dokument" data-toggle="modal" data-target="#modal_admin_add_document">
+            <span class="glyphicon glyphicon-plus"></span>
+        </button>
+        <button id="delete_document_btn" style="float: right; margin-left: 10px;" type="button" class="btn btn-danger tooltipButton"
+                data-placement="top" title="Usuń dokument">
+            <span class="glyphicon glyphicon-trash"></span>
+        </button>
+
+        <div id="div_download">
+            @Html.Partial("_Download", Model.Download)
+        </div>
+    </div>
+
+    <div class="table-responsive col-md-12">
+        <table id="documents_table_id" class="table-striped documents_table table table-bordered table-hover">
+            @if (Model.Documents.Count > 17)
+            {
+                <thead style="padding-right: 17px;">
+                    <tr>
+                        <th class="text-center" style="width: 30%;">Data dodania</th>
+                        <th class="text-center" style="width: 70%;">Opis</th>
+                    </tr>
+                </thead>
+            }
+            else
+            {
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width: 30%;">Data dodania</th>
+                        <th class="text-center" style="width: 70%;">Opis</th>
+                    </tr>
+                </thead>
+            }
+            <tbody>
+                @foreach (var document in Model.Documents)
+                {
+                    <tr class="documents_table_row">
+                        <td class="text-center" style="width: 30%;">@document.UploadDate.ToShortDateString()</td>
+                        <td class="text-left" style="width: 70%;">
+                            <input type="hidden" id="documentID" value="@document.ID" />
+                            <input type="hidden" id="patientID" value="@document.PatientID" />
+                            @document.Description
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".tooltipButton").tooltip();
+
+        $("#add_document_btn").prop('disabled', true);
+        $("#delete_document_btn").prop('disabled', true);
+        $("#download_document_btn").prop('disabled', true);
+        TableHoverDocuments();
+
+        $("#delete_document_btn").on('click', function () {
+            DeleteDocument();
+        });
+    });
+</script>

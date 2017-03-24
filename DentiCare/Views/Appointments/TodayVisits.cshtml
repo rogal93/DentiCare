@@ -1,0 +1,40 @@
+﻿@model List<DentiCare.Models.Appointments.AppointmentModel>
+
+@{
+    ViewBag.Title = "Dzisiejsze wizyty";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Appointments/Appointments.css" rel="stylesheet" />
+
+<div class="container">
+    <h1 class="text-center text-primary col-md-12 main_header">Dzisiejsze wizyty</h1>
+
+    <div class="panel panel-default col-md-8 col-md-offset-2">
+        <div class="panel-body">
+            <div id="div_booked_table" class="table-responsive col-md-12">
+                <table id="booked_table_id" class="today_table table-striped table table-bordered table-hover">
+                    <thead class="blue_font">
+                        <tr>
+                            <th class="text-center" style="width: 30%;">Godzina</th>
+                            <th class="text-center" style="width: 70%;">Pacjent</th>
+                        </tr>
+                    </thead>
+                    <tbody class="grey_font">
+                        @foreach (var appointment in Model)
+                        {
+                            <tr class="today_table_row">
+                                <td class="text-center" style="width: 30%;">
+                                    <input type="hidden" id="appointmentID" value="@appointment.ID" />
+                                    @appointment.Date.ToShortTimeString()
+                                </td>
+                                <td class="text-center" style="width: 70%;">@appointment.PatientFullName</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

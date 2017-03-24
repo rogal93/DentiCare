@@ -1,0 +1,128 @@
+﻿@model DentiCare.Models.Appointments.MakeAppointmentViewModel
+
+@{
+    ViewBag.Title = "Umow wizyte";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Appointments/Appointments.css" rel="stylesheet" />
+
+<div class="container">
+    <h1 class="text-center text-primary col-md-12 main_header">Umów wizytę</h1>
+
+    <div class="form-group col-md-12 text-center" style="margin-top: 20px;">
+        @Html.LabelFor(m => m.DoctorsIDsNames, new { @class = "control-label col-md-5 col-sm-5 text-right grey_font", style = "padding-top: 7px;" })
+        @Html.DropDownListFor(m => m.DoctorsIDsNames, new SelectList(Model.DoctorsIDsNames, "Key", "Value"), new { @class = "form-control col-md-7 col-sm-7 text-center text-primary blue_font" })
+    </div>
+
+    <div id="div_doctorDetails" class="panel panel-default col-md-5" style="margin-top: 40px; padding-bottom: 20px;">
+        @Html.Partial("_DoctorDetails", Model.DoctorDetails)
+    </div>
+
+    <div id="div_freeTermsList" class="panel panel-default col-md-6 col-md-offset-1 free_terms_panel" style="margin-top: 40px;">
+        @Html.Partial("_FreeTermsList", Model.FreeTerms)
+    </div>
+</div>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#DoctorsIDsNames").change(function () {
+            ShowDoctorDetails();
+            $("#make_appointment_btn").prop('disabled', true);
+        });
+    })
+
+    function SubmitAppointment() {
+        var scheduleID = $(".Row_Clicked").find("#scheduleID").attr('value');
+        var hour = $(".Row_Clicked").find("#hour").attr('value');
+
+        if (scheduleID !== undefined) {
+            $.ajax({
+                url: '@Url.Action("SubmitAppointment", "Appointments")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: {
+                    Id: scheduleID,
+                    Hour: hour
+                },
+                success: function (result) {
+                    $('#div_freeTermsList').html(result);
+                    RefreshAlerts();
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+
+    function ShowDoctorDetails() {
+        var userID = $("#DoctorsIDsNames").val();
+
+        if (userID !== undefined) {
+            $.ajax({
+                url: '@Url.Action("ShowDoctorDetails", "Appointments")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: { Id: userID },
+                success: function (result) {
+                    $('#div_doctorDetails').html(result);
+                    ShowFreeTerms();
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+
+    function ShowFreeTerms() {
+        var userID = $("#DoctorsIDsNames").val();
+
+        if (userID !== undefined) {
+            $.ajax({
+                url: '@Url.Action("ShowFreeTerms", "Appointments")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: { Id: userID },
+                success: function (result) {
+                    $('#div_freeTermsList').html(result);
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+
+    function TableHoverFreeTerms() {
+        $(".free_terms_table .free_terms_table_row").on("click", function () {
+            var hasClass = $(this).hasClass("Row_Clicked");
+            if (!hasClass) {
+                $('.Row_Clicked').each(function () {
+                    $(this).removeClass('Row_Clicked');
+                });
+                $(this).addClass('Row_Clicked');
+
+                $("#make_appointment_btn").prop('disabled', false);
+            }
+        });
+    }
+</script>
+

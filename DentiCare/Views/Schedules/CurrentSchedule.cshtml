@@ -1,0 +1,138 @@
+﻿@model DentiCare.Models.Schedules.CurrentScheduleViewModel
+
+@{
+    ViewBag.Title = "Najblizsze dni";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Schedules/Schedules.css" rel="stylesheet" />
+
+<div class="container">
+
+    <h1 class="text-center text-primary col-md-12 main_header">Najbliższe dni</h1>
+
+    <div class="panel panel-default col-md-8 col-md-offset-2">
+        <div id="div_schedule_add_hours">
+            @Html.Partial("_ScheduleAddHoursModal", Model.HoursAtWork)
+        </div>
+        <div id="div_schedule_buttons">
+            @Html.Partial("_ScheduleEditButtons", Model.DayState)
+        </div>
+        <div id="div_schedule_list">
+            @Html.Partial("_MyScheduleList", Model.Schedules)
+        </div>
+    </div>
+
+</div>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script>
+    function SetDayOff() {
+        var scheduleID = $(".Row_Clicked").find("#scheduleID").attr('value');
+
+        if (scheduleID !== undefined) {
+            $.ajax({
+                url: '@Url.Action("SetDayOff", "Schedules")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: { Id: scheduleID },
+                success: function (result) {
+                    RefreshScheduleList();
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+
+    function RefreshScheduleList() {
+        $.ajax({
+            url: '@Url.Action("RefreshScheduleList", "Schedules")',
+            type: "GET",
+            cache: false,
+            contentType: "application/html, charset=utf-8",
+            dataType: "html",
+            data: {},
+            success: function (result) {
+                $("#div_schedule_list").html(result);
+                RefreshAlerts();
+            },
+            beforeSend: function () {
+                $("#loading_modal").modal('show');
+            },
+            complete: function () {
+                $("#loading_modal").modal('hide');
+            }
+        });
+    }
+
+    function TableHoverSchedules() {
+        $(".schedules_table .schedules_table_row").on("click", function () {
+            var hasClass = $(this).hasClass("Row_Clicked");
+            if (!hasClass) {
+                $('.Row_Clicked').each(function () {
+                    $(this).removeClass('Row_Clicked');
+                });
+                $(this).addClass('Row_Clicked');
+            }
+
+            ActivateScheduleEditButtons();
+        });
+    }
+
+    function RefreshAddHoursModal() {
+        var scheduleID = $(".Row_Clicked").find("#scheduleID").attr('value');
+
+        if (scheduleID !== undefined) {
+            $.ajax({
+                url: '@Url.Action("RefreshAddHoursModal", "Schedules")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: { Id: scheduleID },
+                success: function (result) {
+                    $("#div_schedule_add_hours").html(result);
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+
+    function ActivateScheduleEditButtons() {
+        var scheduleID = $(".Row_Clicked").find("#scheduleID").attr('value');
+
+        if (scheduleID !== undefined) {
+            $.ajax({
+                url: '@Url.Action("ActivateScheduleEditButtons", "Schedules")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: { Id: scheduleID },
+                success: function (result) {
+                    $("#div_schedule_buttons").html(result);
+
+                    RefreshAddHoursModal();
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+</script>

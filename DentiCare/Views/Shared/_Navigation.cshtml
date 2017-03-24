@@ -1,0 +1,339 @@
+﻿<ul id="navigation" class="nav navbar-nav">
+    
+    <!--dla admina-->
+    @if (Request.IsAuthenticated && ViewBag.IsAdmin)
+    {
+        <li class="text-center nav-item admin-users-nav">
+            <span class="glyphicon glyphicon-user"></span>
+            @Html.ActionLink("Użytkownicy", "Index", "Admin")
+        </li>
+        <li class="text-center nav-item admin-treatments-nav">
+            <span class="glyphicon glyphicon-book"></span>
+            @Html.ActionLink("Baza zabiegów", "Treatments", "Admin")
+        </li>
+
+        <li class="text-center nav-item send-mail-nav">
+            <span class="glyphicon glyphicon-envelope"></span>
+            @Html.ActionLink("Wyślij maila", "Index", "SendMails")
+        </li>
+
+        <li class="text-center nav-item contact-nav">
+            <span class="glyphicon glyphicon-earphone"></span>
+            @Html.ActionLink("Kontakt", "Contact", "Home")
+        </li>
+    }
+    //dla lekarza
+    else if (Request.IsAuthenticated && ViewBag.IsDoctor)
+    {
+        <li class="text-center nav-item undescribed-nav">
+            <span class="glyphicon glyphicon-pencil"></span>
+            @Html.ActionLink("Opisz wizytę", "UndescribedAppointments", "Appointments")
+        </li>
+        <li class="text-center nav-item schedule-nav dropdown">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grafik <b class="caret"></b></a>
+            <ul class="dropdown-menu" style="margin-top: 5px;">
+                <li class="text-center nav-item" style="margin-bottom: 20px;">
+                    <h4>
+                        @Html.ActionLink("Dzisiejsze wizyty", "TodayVisits", "Appointments")
+                    </h4>
+                </li>
+                <li class="text-center nav-item" style="margin-bottom: 20px;">
+                    <h4>
+                        @Html.ActionLink("Najbliższe dni", "CurrentSchedule", "Schedules")
+                    </h4>
+                </li>
+                <li class="text-center nav-item">
+                    <h4>
+                        @Html.ActionLink("Wprowadź grafik", "EnterSchedule", "Schedules")
+                    </h4>
+                </li>
+            </ul>
+        </li>
+        <li class="text-center nav-item allPatients-nav dropdown">
+            <span class="glyphicon glyphicon-search"></span>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Baza pacjentów <b class="caret"></b></a>
+            <ul class="dropdown-menu" style="margin-top: 5px;">
+                <li class="text-center nav-item" style="margin-bottom: 20px;">
+                    <h4>
+                        @Html.ActionLink("Baza pacjentów", "Index", "Patients")
+                    </h4>
+                </li>
+                <li class="text-center nav-item">
+                    <h4>
+                        @Html.ActionLink("Dokumentacja", "MedicalDocumentation", "Patients")
+                    </h4>
+                </li>
+            </ul>
+        </li>
+
+        <li class="text-center nav-item send-mail-nav">
+            <span class="glyphicon glyphicon-envelope"></span>
+            @Html.ActionLink("Wyślij maila", "Index", "SendMails")
+        </li>
+
+        <li class="text-center nav-item doctors-nav">
+            <span class="glyphicon glyphicon-user"></span>
+            @Html.ActionLink("Lekarze", "Doctors", "Home")
+        </li>
+        <li class="text-center nav-item prices-nav">
+            <span class="glyphicon glyphicon-euro"></span>
+            @Html.ActionLink("Cennik", "Prices", "Treatments")
+        </li>
+        <li class="text-center nav-item contact-nav">
+            <span class="glyphicon glyphicon-earphone"></span>
+            @Html.ActionLink("Kontakt", "Contact", "Home")
+        </li>
+    }
+    else if (Request.IsAuthenticated && ViewBag.IsAssistant)
+    {
+        <li class="text-center nav-item assistant-appointments-nav dropdown">
+            <span class="glyphicon glyphicon-pencil"></span>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Wizyty <b class="caret"></b></a>
+            <ul class="dropdown-menu" style="margin-top: 5px;">
+                <li class="text-center nav-item" style="margin-bottom: 20px;">
+                    <h4>
+                        @Html.ActionLink("Dzisiejsze wizyty", "TodayVisitsForAssistant", "Appointments")
+                    </h4>
+                </li>
+                <li class="text-center nav-item" style="margin-bottom: 20px;">
+                    <h4>
+                        @Html.ActionLink("Zaaranżuj", "ArrangeAppointment", "Appointments")
+                    </h4>
+                </li>
+                <li class="text-center nav-item">
+                    <h4>
+                        @Html.ActionLink("Odwołaj", "CancelAppointment", "Appointments")
+                    </h4>
+                </li>
+            </ul>
+        </li>
+        <li class="text-center nav-item doctorschedule-nav">
+            <span class="glyphicon glyphicon-calendar"></span>
+            @Html.ActionLink("Grafiki", "DoctorSchedule", "Schedules")
+        </li>
+        <li class="text-center nav-item doctors-nav">
+            <span class="glyphicon glyphicon-user"></span>
+            @Html.ActionLink("Lekarze", "Doctors", "Home")
+        </li>
+        <li class="text-center nav-item allUsers-nav">
+            <span class="glyphicon glyphicon-search"></span>
+            @Html.ActionLink("Użytkownicy", "AllUsersForAssistant", "Home")
+        </li>
+
+        <li class="text-center nav-item send-mail-nav">
+            <span class="glyphicon glyphicon-envelope"></span>
+            @Html.ActionLink("Wyślij maila", "Index", "SendMails")
+        </li>
+
+        <li class="text-center nav-item prices-nav">
+            <span class="glyphicon glyphicon-euro"></span>
+            @Html.ActionLink("Cennik", "Prices", "Treatments")
+        </li>
+        <li class="text-center nav-item contact-nav">
+            <span class="glyphicon glyphicon-earphone"></span>
+            @Html.ActionLink("Kontakt", "Contact", "Home")
+        </li>
+    }
+    //dla pacjentów
+    else if (Request.IsAuthenticated)
+    {
+        <li class="text-center nav-item appointments-nav dropdown">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Wizyty <b class="caret"></b></a>
+            <ul class="dropdown-menu" style="margin-top: 5px;">
+                <li class="text-center nav-item" style="margin-bottom: 20px;">
+                    <h4>
+                        @Html.ActionLink("Nadchodzące wizyty", "Index", "Appointments")
+                    </h4>
+                </li>
+                <li class="text-center nav-item" style="margin-bottom: 20px;">
+                    <h4>
+                        @Html.ActionLink("Umów wizytę", "MakeAppointment", "Appointments")
+                    </h4>
+                </li>
+                <li class="text-center nav-item">
+                    <h4>
+                        @Html.ActionLink("Historia pacjenta", "History", "Appointments")
+                    </h4>
+                </li>
+            </ul>
+        </li>
+
+        <li class="text-center nav-item send-mail-nav">
+            <span class="glyphicon glyphicon-envelope"></span>
+            @Html.ActionLink("Wyślij maila", "Index", "SendMails")
+        </li>
+
+        <li class="text-center nav-item doctors-nav">
+            <span class="glyphicon glyphicon-user"></span>
+            @Html.ActionLink("Lekarze", "Doctors", "Home")
+        </li>
+        <li class="text-center nav-item prices-nav">
+            <span class="glyphicon glyphicon-euro"></span>
+            @Html.ActionLink("Cennik", "Prices", "Treatments")
+        </li>
+        <li class="text-center nav-item contact-nav">
+            <span class="glyphicon glyphicon-earphone"></span>
+            @Html.ActionLink("Kontakt", "Contact", "Home")
+        </li>
+        
+        <li class="nav-divider text-center nav-item hidden-lg hidden-md hidden-sm"></li>
+        <li class="text-center nav-item hidden-lg hidden-md hidden-sm">
+            @Html.ActionLink("Moje dane", "Index", "UserSettings")
+        </li>
+        <li class="text-center nav-item hidden-lg hidden-md hidden-sm">
+            @Html.ActionLink("Nowe hasło", "ChangePassword", "Manage")
+        </li>
+        <li class="text-center nav-item hidden-lg hidden-md hidden-sm">
+            @Html.ActionLink("Zmień adres", "ChangeAddress", "UserSettings")
+        </li>
+        <li class="text-center nav-item hidden-lg hidden-md hidden-sm">
+            @Html.ActionLink("Ustaw zdjęcie", "SetPhoto", "UserSettings")
+        </li>
+        
+        <li class="text-center nav-item hidden-lg hidden-md hidden-sm">
+            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+            {
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-primary" style="width: 100%;"><span style="margin-left: 5%;">Wyloguj</span></button>
+            }
+        </li>
+
+    }
+    //dla niezalogowanych
+    else
+    {
+        <li class="text-center nav-item home-nav">
+            <span class="glyphicon glyphicon-home"></span>
+            @Html.ActionLink("Strona glowna", "Index", "Account")
+        </li>
+        <li class="text-center nav-item doctors-nav">
+            <span class="glyphicon glyphicon-user"></span>
+            @Html.ActionLink("Lekarze", "Doctors", "Home")
+        </li>
+        <li class="text-center nav-item prices-nav">
+            <span class="glyphicon glyphicon-euro"></span>
+            @Html.ActionLink("Cennik", "Prices", "Treatments")
+        </li>
+        <li class="text-center nav-item contact-nav">
+            <span class="glyphicon glyphicon-earphone"></span>
+            @Html.ActionLink("Kontakt", "Contact", "Home")
+        </li>
+    }
+</ul>
+
+<script>
+    True = true; False = false;
+
+    $(document).ready(function () {
+        SetNavigationActive();
+        SetScheduleNavHover();
+        SetAppointmentsNavHover();
+        SetAssistantAppointmentsNavHover();
+        SetAllPatientsNavHover();
+    });
+
+    function SetNavigationActive() {
+        var title = "@ViewBag.Title";
+        $('#navigation > .nav-item').each(function () {
+            $(this).removeClass('active');
+        });
+        switch (title) {
+            //ADMIN
+            case "Uzytkownicy": $(".admin-users-nav").addClass('active'); break;
+            case "Baza zabiegow": $(".admin-treatments-nav").addClass('active'); break;
+
+            //STOMATOLOG
+            case "Najblizsze dni": $(".schedule-nav").addClass('active'); break;
+            case "Dzisiejsze wizyty": $(".schedule-nav").addClass('active'); break;
+            case "Wprowadz grafik": $(".schedule-nav").addClass('active'); break;
+            case "Opisz wizyte": $(".undescribed-nav").addClass('active'); break;
+            case "Baza pacjentow": $(".allPatients-nav").addClass('active'); break;
+            case "Dokumentacja": $(".allPatients-nav").addClass('active'); break;
+
+            //ASYSTENTKA
+            case "Grafiki stomatologow": $(".doctorschedule-nav").addClass('active'); break;
+            case "Wizyty dzisiejsze": $(".assistant-appointments-nav").addClass('active'); break;
+            case "Zaaranzuj": $(".assistant-appointments-nav").addClass('active'); break;
+            case "Odwolaj": $(".assistant-appointments-nav").addClass('active'); break;
+            case "Baza uzytkownikow": $(".allUsers-nav").addClass('active'); break;
+
+            //PACJENT
+            case "Nadchodzace wizyty": $(".appointments-nav").addClass('active'); break;
+            case "Umow wizyte": $(".appointments-nav").addClass('active'); break;
+            case "Historia pacjenta": $(".appointments-nav").addClass('active'); break;
+
+            //OGOLNE
+            case "Wysylanie maila": $(".send-mail-nav").addClass('active'); break;
+            case "Wyslij maila": $(".send-mail-nav").addClass('active'); break;
+
+            case "Strona glowna": $(".home-nav").addClass('active'); break;
+            case "Lekarze": $(".doctors-nav").addClass('active'); break;
+            case "Cennik": $(".prices-nav").addClass('active'); break;
+            case "Kontakt": $(".contact-nav").addClass('active'); break;
+            case "Profil": $(".profile-nav").addClass('active'); break;
+        }
+    }
+
+    function SetAllPatientsNavHover() {
+        $(".allPatients-nav").hover(
+            function () {
+                $(".allPatients-nav > a:focus").css('color', 'white');
+                $(".allPatients-nav > a:hover").css('color', 'white');
+                $(".allPatients-nav > a").css('color', 'white');
+            },
+            function () {
+                $(".allPatients-nav > a:focus").css('color', '#1981D3');
+                $(".allPatients-nav > a:hover").css('color', '#1981D3');
+                $(".allPatients-nav > a").css('color', '#777777');
+            }
+        );
+    }
+
+    function SetScheduleNavHover() {
+        $(".schedule-nav").hover(
+            function () {
+                $(".schedule-nav > a:focus").css('color', 'white');
+                $(".schedule-nav > a:hover").css('color', 'white');
+                $(".schedule-nav > a").css('color', 'white');
+            },
+            function () {
+                $(".schedule-nav > a:focus").css('color', '#1981D3');
+                $(".schedule-nav > a:hover").css('color', '#1981D3');
+                $(".schedule-nav > a").css('color', '#777777');
+            }
+        );
+    }
+
+    function SetAppointmentsNavHover() {
+        $(".appointments-nav").hover(
+            function () {
+                $(".appointments-nav > a:focus").css('color', 'white');
+                $(".appointments-nav > a:hover").css('color', 'white');
+                $(".appointments-nav > a").css('color', 'white');
+            },
+            function () {
+                $(".appointments-nav > a:focus").css('color', '#1981D3');
+                $(".appointments-nav > a:hover").css('color', '#1981D3');
+                $(".appointments-nav > a").css('color', '#777777');
+            }
+        );
+    }
+
+    function SetAssistantAppointmentsNavHover() {
+        $(".assistant-appointments-nav").hover(
+            function () {
+                $(".assistant-appointments-nav > a:focus").css('color', 'white');
+                $(".assistant-appointments-nav > a:hover").css('color', 'white');
+                $(".assistant-appointments-nav > a").css('color', 'white');
+            },
+            function () {
+                $(".assistant-appointments-nav > a:focus").css('color', '#1981D3');
+                $(".assistant-appointments-nav > a:hover").css('color', '#1981D3');
+                $(".assistant-appointments-nav > a").css('color', '#777777');
+            }
+        );
+    }
+</script>
+

@@ -1,0 +1,55 @@
+﻿@model DentiCare.Models.Schedules.DoctorScheduleViewModel
+
+@{
+    ViewBag.Title = "Grafiki stomatologow";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Schedules/Schedules.css" rel="stylesheet" />
+
+<div class="container">
+    <h1 class="text-center text-primary col-md-12 main_header">Grafiki stomatologów</h1>
+
+    <div class="form-group col-md-12 text-center" style="margin-top: 20px;">
+        @Html.LabelFor(m => m.NamesOfDoctors, new { @class = "control-label col-md-5 text-right grey_font", style = "padding-top: 7px;" })
+        @Html.DropDownListFor(m => m.NamesOfDoctors, new SelectList(Model.NamesOfDoctors, "Key", "Value"), new { @class = "form-control col-md-7 text-center text-primary blue_font" })
+    </div>
+
+    <div id="div_doctorScheduleList" class="panel panel-default col-md-8 col-md-offset-2">
+        @Html.Partial("_DoctorScheduleList", Model.Schedules)
+    </div>
+</div>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#NamesOfDoctors").change(function () {
+            ShowDoctorSchedule();
+        });
+    })
+
+    function ShowDoctorSchedule() {
+        var userID = $("#NamesOfDoctors").val();
+
+        if (userID !== undefined) {
+            $.ajax({
+                url: '@Url.Action("ShowDoctorSchedule", "Schedules")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: { Id: userID },
+                success: function (result) {
+                    $('#div_doctorScheduleList').html(result);
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+</script>
+

@@ -1,0 +1,108 @@
+﻿@model List<DentiCare.Models.Treatments.PriceByCategoryViewModel>
+@{
+    ViewBag.Title = "Cennik";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    int counter = 0;
+}
+
+<link href="~/Content/Treatments/Treatments.css" rel="stylesheet" />
+
+<div class="container">
+    <h1 class="text-center text-primary" style="font-weight: 600;">Cennik usług</h1>
+    <div class="panel-group col-md-8 col-md-offset-2" id="accordion">
+        <div class="panel panel-default">
+            @foreach (var Category in Model)
+            {
+                counter++;
+                <div class="div_category">
+                    <div id="div_header_@counter" class="panel-heading text-center">
+                        <h3 class="panel-title">
+                            <a class="text-uppercase a-accordion" style="font-weight: bold; font-size: 22px;" data-toggle="collapse" data-parent="#accordion" href="#consultation">
+                                @Category.CategoryName
+                                @if (Category == Model.First())
+                                {
+                                    <span class="glyphicon glyphicon-chevron-down span-accordion" style="float: right;"></span>
+                                }
+                                else
+                                {
+                                    <span class="glyphicon glyphicon-chevron-up span-accordion" style="float: right;"></span>
+                                }
+                            </a>
+                        </h3>
+                    </div>
+                    <div id="div_collapse_@counter" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover" style="font-size: 16px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Nazwa zabiegu</th>
+                                            <th class="text-center">Cena</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var treatment in Category.Treatments)
+                                        {
+                                            <tr>
+                                                <td>@treatment.Name</td>
+                                                <td class="text-center">@treatment.Price zł</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        SetFirstDivActive();
+
+        $("a.a-accordion").on('click', function () {
+            var span = $(this).children("span");
+            var isDown = $(this).children("span").hasClass("glyphicon-chevron-down");
+
+            SetHeaderIcons(span, isDown);
+
+            if (isDown) {
+                span.removeClass("glyphicon-chevron-up");
+                span.addClass("glyphicon-chevron-down");
+            }
+
+            $("div.collapse").each(function () {
+                $(this).slideUp(500);
+            });
+
+            var main_div = $(this).parents(".div_category");
+            main_div.children(".panel-collapse").slideDown(1000);
+
+            $(".div_category").css("color", "#777777");
+            $(this).parents(".div_category").css("color", "#428bca");
+        });
+    });
+
+    function SetFirstDivActive() {
+        $("#div_collapse_1").slideDown(1000)
+                            .css("color", "#428bca");
+        $("#div_header_1").parent().css("color", "#428bca");
+    }
+
+    function SetHeaderIcons(span, isDown) {
+        $("span.span-accordion").each(function () {
+            if ($(this) != span) {
+                $(this).removeClass("glyphicon-chevron-down");
+                $(this).addClass("glyphicon-chevron-up");
+            }
+        });
+        if (!isDown) {
+            span.removeClass("glyphicon-chevron-up");
+            span.addClass("glyphicon-chevron-down");
+        }
+    }
+</script>

@@ -1,0 +1,63 @@
+﻿.users_panel {
+    border-color: #428bca;
+}
+    .users_panel > .panel-heading {
+        border-bottom-color: #428bca;
+        background-color: white; 
+        color: #777777;
+    } 
+        .users_panel > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+#users_admin_table {
+    border-color: #428bca;
+}
+    #users_admin_table > thead > tr > th {
+        border-bottom-color: #428bca; 
+        border-right-color: #428bca;
+    }
+
+.users_table_row {
+    color: #777777;
+}
+
+table.users_table {
+        border-color: #428bca;
+        color: #428bca;
+        display: table;
+        width: 100%;
+    }
+    table.users_table thead, table.users_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.users_table tbody {
+        overflow: auto;
+        height: 350px;
+    }
+    table.users_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+
+/* partial */
+
+#div_message {
+    margin-left: 10px;
+    border-color: #428bca;
+}
+    #div_message > .panel-heading {
+        background-color: white; 
+        color: #777777;
+        border-bottom-color: #777777;
+    }
+        #div_message > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+    #div_message > .panel-body > .panel-heading {
+        color: #428bca;
+        border-bottom-color: #777777;
+    }

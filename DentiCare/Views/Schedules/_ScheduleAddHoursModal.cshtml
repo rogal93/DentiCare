@@ -1,0 +1,57 @@
+﻿@model DentiCare.Models.Schedules.HoursAtWork
+
+<div class="modal fade col-md-offset-3 col-md-6" id="modal_schedule_add_hours">
+    @using (Ajax.BeginForm("AddHours", "Doctors", new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "div_schedule_list",
+        OnSuccess = "RefreshAlerts"
+    },
+        new { role = "form" }))
+    {
+        <div class="modal-content">
+            <!--naglowek-->
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-toggle="modal" data-target="#modal_schedule_add_hours">&times;</button>
+                <h2 class="modal-title">Dodaj godziny pracy</h2>
+            </div>
+            <!--tresc-->
+            <div class="modal-body">
+                <div class="panel panel-success col-md-12">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            @Html.HiddenFor(m => m.ScheduleID)
+                        </div>
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(m => m.HourFrom, new { @class = "control-label col-md-12 text-center" })
+                            <div class="col-md-8 col-md-offset-2 text-center">
+                                @Html.DropDownListFor(m => m.HourFrom, new SelectList(Model.HoursFrom, "Key", "Value", 8), new { @class = "form-control text-center text-primary" })
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6 text-center">
+                            @Html.LabelFor(m => m.HourTo, new { @class = "control-label col-md-12" })
+                            <div class="col-md-8 col-md-offset-2">
+                                @Html.DropDownListFor(m => m.HourTo, new SelectList(Model.HoursTo, "Key", "Value", 16), new { @class = "form-control text-center text-primary" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4 col-md-offset-4 text-center">
+                                <button id="modal_add_hours_btn" type="submit" class="btn btn-primary btn-lg" data-dissmiss="modal">Dodaj</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    }
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#modal_add_hours_btn").on('click', function () {
+            $("#add_hours_btn").addClass("disabled");
+            $("#modal_schedule_add_hours").modal('hide');
+        });
+    });
+</script>

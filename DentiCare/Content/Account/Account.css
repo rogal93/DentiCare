@@ -1,0 +1,130 @@
+﻿/*-----------------------------------------------------------------
+----------------------- Login / logoff buttons --------------------
+-----------------------------------------------------------------*/
+
+#loginLink {
+    color: white;
+    padding: 7px;
+    margin-right: 0;
+}
+    #loginLink:hover {
+        background-color: #4cae4c !important;
+    }
+
+#logoutBtn {
+    margin-right: 15px;
+}
+
+.btn-login {
+    margin-top: 3px;
+    width: 100px;
+    height: 35px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #eeeeee;
+}
+
+.btn-login-mobile {
+    color: #428bca;
+    height: 46px;
+    width: 47px;
+    margin-right: 1px;
+    font-size: 2em;
+    border-color: #428bca;
+    border-radius: 3px;
+}
+    .btn-login-mobile:hover {
+        color: #eeeeee;
+        background-color: #428bca;
+        height: 46px;
+        width: 47px;
+        margin-right: 1px;
+        font-size: 2em;
+        border-color: #428bca;
+        border-radius: 3px;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+    }
+
+/*-----------------------------------------------------------------
+----------------------- Account\Index -----------------------------
+-----------------------------------------------------------------*/
+
+.jumbotron {
+    margin-top: 50px;
+    color: #428bca;
+    padding: 0;
+    background-color: white;
+}
+
+.btn3d {
+    -moz-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+    transition: all .25s linear;
+    position: relative;
+    outline: medium none;
+    border: 0;
+    margin-right: 10px;
+    margin-top: 15px;
+    top: 0;
+} 
+    .btn3d:focus { 
+        outline: medium none;
+    }
+    .btn3d:active { 
+        top: 9px; 
+    }
+
+.btn3d.btn-primary { 
+    box-shadow: 0 0 0 1px #428bca inset, 
+                0 0 0 2px rgba(255, 255, 255, 0.15) inset, 
+                0 8px 0 0 #357ebd, 0 8px 0 1px rgba(0, 0, 0, 0.4), 
+                0 8px 8px 1px rgba(0, 0, 0, 0.5); 
+}
+.btn3d.btn-success { 
+    box-shadow: 0 0 0 1px #5cb85c inset, 
+                0 0 0 2px rgba(255, 255, 255, 0.15) inset, 
+                0 8px 0 0 #4cae4c, 0 8px 0 1px rgba(0, 0, 0, 0.4), 
+                0 8px 8px 1px rgba(0, 0, 0, 0.5); 
+}
+
+.register-login-btns {
+    margin-bottom: 30px;
+}
+
+#company {
+    font-size: 70px;
+}
+
+/*-----------------------------------------------------------------
+--------------------- Modal login/register ------------------------
+-----------------------------------------------------------------*/
+
+#modal_login {
+    top: 25%;
+    color: #428bca;
+}
+
+#modal_register {
+    top: 3%;
+    color: #3c763d;
+}
+
+#modal_register_btn {
+    float: right;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+#user_fields, #address_info, #personal_info {
+    margin: 20px 10px 20px 20px;
+}
+
+#register_submit_col {
+    margin: 20px 0 20px 20px;
+}

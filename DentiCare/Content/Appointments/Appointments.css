@@ -1,0 +1,193 @@
+﻿/*-----------------------------------------------------------------
+--------------------- Appointments\MakeAppointment ----------------
+-----------------------------------------------------------------*/
+
+table.free_terms_table {
+        border-color: #428bca;
+        color: #428bca;
+        display: table;
+        width: 100%;
+    }
+    table.free_terms_table thead, table.free_terms_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.free_terms_table tbody {
+        overflow: auto;
+        height: 266px;
+    }
+    table.free_terms_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+
+
+.free_terms_panel {
+    border-color: #428bca;
+}
+    .free_terms_panel > .panel-heading {
+        border-bottom-color: #428bca;
+        background-color: white; 
+        color: #777777;
+    } 
+        .free_terms_panel > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+#div_doctorDetails {
+    border-color: #428bca;
+}
+
+.free_terms_panel-footer {
+    background-color: white;
+    border-top-color: #428bca;
+}
+
+/*-----------------------------------------------------------------
+--------------------- Appointments\History ------------------------
+-----------------------------------------------------------------*/
+
+.history_table {
+    margin-top: 80px;
+}
+
+table.history_table {
+        display: table;
+        width: 100%;
+    }
+    table.history_table thead, table.history_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.history_table tbody {
+        overflow: auto;
+        height: 450px;
+    }
+    table.history_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+
+/*-----------------------------------------------------------------
+--------------------- Appointments\Index --------------------------
+-----------------------------------------------------------------*/
+
+table.booked_table {
+        display: table;
+        width: 100%;
+    }
+    table.booked_table thead, table.booked_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.booked_table tbody {
+        overflow: auto;
+        height: 350px;
+    }
+    table.booked_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+
+/*-----------------------------------------------------------------
+--------------- Appointments\UndescribedAppointments --------------
+-----------------------------------------------------------------*/
+
+table.undescribed_table {
+        display: table;
+        width: 100%;
+    }
+    table.undescribed_table thead, table.undescribed_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.undescribed_table tbody {
+        overflow: auto;
+        height: 350px;
+    }
+    table.undescribed_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+
+#panel_booked_table, #panel_undescribed_details, #undescribed_table_id {
+    border-color: #428bca;
+}
+
+/*-----------------------------------------------------------------
+--------------- Appointments\ArrangeAppointment -------------------
+-----------------------------------------------------------------*/
+
+.free_doctor_terms_panel {
+    border-color: #428bca;
+}
+    .free_doctor_terms_panel > .panel-heading {
+        border-bottom-color: #428bca;
+        background-color: white; 
+        color: #777777;
+    } 
+        .free_doctor_terms_panel > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+table.patients_table {
+        border-color: #428bca;
+        color: #428bca;
+        display: table;
+        width: 100%;
+    }
+    table.patients_table thead, table.patients_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.patients_table tbody {
+        overflow: auto;
+        height: 320px;
+    }
+    table.patients_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+
+.patients_list_panel {
+    border-color: #428bca;
+}
+    .patients_list_panel > .panel-heading {
+        border-bottom-color: #428bca;
+        background-color: white; 
+        color: #777777;
+    } 
+        .patients_list_panel > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+.Patient_Clicked, .Patient_Clicked:hover {
+    color: white !important;
+    background-color: #428bca !important;
+}
+
+.Term_Clicked, .Term_Clicked:hover {
+    color: white !important;
+    background-color: #428bca !important;
+}
+
+/*-----------------------------------------------------------------
+--------------- Appointments\CancelAppointment -------------------
+-----------------------------------------------------------------*/
+
+.booked_terms_List_panel {
+    border-color: #428bca;
+}
+    .booked_terms_List_panel > .panel-heading {
+        border-bottom-color: #428bca;
+        background-color: white; 
+        color: #777777;
+    } 
+        .booked_terms_List_panel > .panel-heading > h3 {
+            font-weight: 600;
+        }

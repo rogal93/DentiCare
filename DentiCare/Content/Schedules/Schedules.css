@@ -1,0 +1,56 @@
+﻿#div_working > .panel-heading {
+    background-color: white;
+}
+
+/*-----------------------------------------------------------------
+--------------------- Schedules\CurrentSchedule -------------------
+-----------------------------------------------------------------*/
+
+table.schedules_table {
+        color: #428bca;
+        display: table;
+        width: 100%;
+    }
+    table.schedules_table thead, table.schedules_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.schedules_table tbody {
+        overflow: auto;
+        height: 418px;
+    }
+    table.schedules_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+
+/*modal*/
+
+#modal_schedule_add_hours {
+    margin-top: 10%;
+    color: #428bca;
+}
+
+/*-----------------------------------------------------------------
+--------------------- Schedules\DoctorSchedule --------------------
+-----------------------------------------------------------------*/
+
+table.doctor_schedules_table {
+        color: #428bca;
+        display: table;
+        width: 100%;
+    }
+    table.doctor_schedules_table thead, table.doctor_schedules_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.doctor_schedules_table tbody {
+        overflow: auto;
+        height: 380px;
+    }
+    table.doctor_schedules_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }

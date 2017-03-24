@@ -1,0 +1,125 @@
+﻿@model DentiCare.Models.Appointments.ArrangeAppointmentViewModel
+
+@{
+    ViewBag.Title = "Zaaranzuj";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Appointments/Appointments.css" rel="stylesheet" />
+
+<div class="container">
+    <h1 class="text-center text-primary col-md-12 main_header">Zaaranżuj wizytę</h1>
+
+    <div class="form-group col-md-12 text-center" style="margin-top: 10px;">
+        @Html.LabelFor(m => m.NamesOfDoctors, new { @class = "control-label col-md-7 text-right grey_font", style = "padding-top: 7px;" })
+        @Html.DropDownListFor(m => m.NamesOfDoctors, new SelectList(Model.NamesOfDoctors, "Key", "Value"), new { @class = "form-control col-md-5 text-center text-primary blue_font" })
+    </div>
+
+    <div id="div_patientsList" class="panel panel-default col-md-4 patients_list_panel">
+        @Html.Partial("_PatientsList", Model.Patients)
+    </div>
+
+    <div id="div_free_doctor_termsList" class="panel panel-default col-md-6 col-md-offset-1 free_doctor_terms_panel">
+        @Html.Partial("_FreeDoctorTermsList", Model.FreeTerms)
+    </div>
+</div>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#NamesOfDoctors").change(function () {
+            ShowFreeDoctorTerms();
+            $("#arrange_appointment_btn").prop('disabled', true);
+        });
+    })
+
+    function Arrange() {
+        var patient = $(".Patient_Clicked").find("#patientID").attr('value');
+        var schedule = $(".Term_Clicked").find("#scheduleID").attr('value');
+        var hour = $(".Term_Clicked").find("#hour").attr('value');
+
+        if (schedule !== undefined) {
+            $.ajax({
+                url: '@Url.Action("Arrange", "Appointments")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: {
+                    patientID: patient,
+                    scheduleID: schedule,
+                    Hour: hour
+                },
+                success: function (result) {
+                    $('#div_free_doctor_termsList').html(result);
+                    RefreshAlerts();
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+
+    function ShowFreeDoctorTerms() {
+        var userID = $("#NamesOfDoctors").val();
+
+        if (userID !== undefined) {
+            $.ajax({
+                url: '@Url.Action("ShowFreeDoctorTerms", "Appointments")',
+                type: "GET",
+                cache: false,
+                contentType: "application/html, charset=utf-8",
+                dataType: "html",
+                data: { Id: userID },
+                success: function (result) {
+                    $('#div_free_doctor_termsList').html(result);
+                },
+                beforeSend: function () {
+                    $("#loading_modal").modal('show');
+                },
+                complete: function () {
+                    $("#loading_modal").modal('hide');
+                }
+            });
+        }
+    }
+
+    function TableHoverFreeTerms() {
+        $(".free_terms_table .free_terms_table_row").on("click", function () {
+            var hasClass = $(this).hasClass("Term_Clicked");
+            if (!hasClass) {
+                $('.Term_Clicked').each(function () {
+                    $(this).removeClass('Term_Clicked');
+                });
+                $(this).addClass('Term_Clicked');
+
+                var patient = $(".Patient_Clicked").find("#patientID").attr('value');
+                if (patient !== undefined) {
+                    $("#arrange_appointment_btn").prop('disabled', false);
+                }
+            }
+        });
+    }
+
+    function TableHoverPatients() {
+        $(".patients_table .patients_table_row").on("click", function () {
+            var hasClass = $(this).hasClass("Patient_Clicked");
+            if (!hasClass) {
+                $('.Patient_Clicked').each(function () {
+                    $(this).removeClass('Patient_Clicked');
+                });
+                $(this).addClass('Patient_Clicked');
+
+                var schedule = $(".Term_Clicked").find("#scheduleID").attr('value');
+                if (schedule !== undefined) {
+                    $("#arrange_appointment_btn").prop('disabled', false);
+                }
+            }
+        });
+    }
+</script>
+

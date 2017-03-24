@@ -1,0 +1,87 @@
+﻿@model DentiCare.Models.UserSettings.DisplayDetailsViewModel
+
+@if (Model.PersonalDetails.PersonalID > 0)
+{
+    <div class="panel-heading text-center">
+        <h3>@Model.PersonalDetails.FirstName @Model.PersonalDetails.LastName</h3>
+    </div>
+    <div class="panel-body">
+        <div class="text-center">
+            <img class="img-thumbnail" width="300" height="360" src="@Model.Photo" alt="profile_photo" />
+        </div>
+
+        <div class="panel panel-default details_panel">
+            <div class="panel-heading details_heading">
+                <h4 class="text-center">@Html.LabelFor(m => m.AccountDetails)</h4>
+            </div>
+            <div class="panel-body blue_font">
+                <div class="col-md-12">
+                    @Html.LabelFor(m => m.AccountDetails.Email, new { @class = "col-md-5 control-label labels_grey_right" })
+                    @Model.AccountDetails.Email
+                </div>
+                <div class="col-md-12">
+                    @Html.LabelFor(m => m.AccountDetails.PhoneNumber, new { @class = "col-md-5 control-label labels_grey_right" })
+                    @Model.AccountDetails.PhoneNumber
+                </div>
+
+                <div class="col-md-12">
+                    @Html.LabelFor(m => m.PersonalDetails.RegisterDate, new { @class = "col-md-5 control-label labels_grey_right" })
+                    @Model.PersonalDetails.RegisterDate.ToShortDateString()
+                </div>
+                <div class="col-md-12">
+                    @Html.LabelFor(m => m.PersonalDetails.Gender, new { @class = "col-md-5 control-label labels_grey_right" })
+                    @Model.PersonalDetails.Gender
+                </div>
+
+                <div class="col-md-12">
+                    @Html.LabelFor(m => m.AddressDetails.City, new { @class = "col-md-5 control-label labels_grey_right" })
+                    @Model.AddressDetails.City
+                </div>
+                @if (!string.IsNullOrEmpty(Model.AddressDetails.Street))
+                {
+                    <div class="col-md-12">
+                        @Html.LabelFor(m => m.AddressDetails.Street, new { @class = "col-md-5 control-label labels_grey_right" })
+                        @Model.AddressDetails.Street
+                    </div>
+                }
+                <div class="col-md-12">
+                    @Html.LabelFor(m => m.AddressDetails.HouseNumber, new { @class = "col-md-5 control-label labels_grey_right" })
+                    @Model.AddressDetails.HouseNumber
+                </div>
+                @if (!string.IsNullOrEmpty(Model.AddressDetails.ApartmentNumber))
+                {
+                    <div class="col-md-12">
+                        @Html.LabelFor(m => m.AddressDetails.ApartmentNumber, new { @class = "col-md-5 control-label labels_grey_right" })
+                        @Model.AddressDetails.ApartmentNumber
+                    </div>
+                }
+                <div class="col-md-12">
+                    @Html.LabelFor(m => m.AddressDetails.PostalCode, new { @class = "col-md-5 control-label labels_grey_right" })
+                    @Model.AddressDetails.PostalCode
+                </div>
+                @if (Model.AddressDetails.City != Model.AddressDetails.PostalCity)
+                {
+                    <div class="col-md-12">
+                        @Html.LabelFor(m => m.AddressDetails.PostalCity, new { @class = "col-md-5 control-label labels_grey_right" })
+                        @Model.AddressDetails.PostalCity
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="panel-heading text-center" style="border-bottom: none;">
+        <h3>Wybierz użytkownika z listy</h3>
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        $(".delete_user_btn").on('click', function () {
+            DeleteUser();
+            return true;
+        });
+    });
+</script>

@@ -1,0 +1,113 @@
+﻿/*-----------------------------------------------------------------
+-------------------------- Patients\Index -------------------------
+-----------------------------------------------------------------*/
+
+table.patients_table {
+        border-color: #428bca;
+        color: #428bca;
+        display: table;
+        width: 100%;
+    }
+    table.patients_table thead, table.patients_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.patients_table tbody {
+        overflow: auto;
+        height: 650px;
+    }
+    table.patients_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+
+.patients_list_panel {
+    border-color: #428bca;
+}
+    .patients_list_panel > .panel-heading {
+        border-bottom-color: #428bca;
+        background-color: white; 
+        color: #777777;
+    } 
+        .patients_list_panel > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+/* partial */
+
+#div_patient_details {
+    border-color: #428bca;
+}
+    #div_patient_details > .panel-heading {
+        background-color: white; 
+        color: #777777;
+        border-bottom-color: #777777;
+    }
+        #div_patient_details > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+    #div_patient_details > .panel-body > .panel-heading {
+        color: #428bca;
+        border-bottom-color: #777777;
+    }
+
+.details_panel {
+    margin-top: 10px;
+}
+
+/*-----------------------------------------------------------------
+----------- Patients\MedicalDocumentation -------------------------
+-----------------------------------------------------------------*/
+
+#documents_table_id {
+    margin-top: 15px;
+    border-color: #428bca;
+}
+    #documents_table_id > thead > tr > th {
+        border-bottom-color: #428bca; 
+        border-right-color: #428bca;
+    }
+
+table.documents_table {
+        border-color: #428bca;
+        color: #428bca;
+        display: table;
+        width: 100%;
+    }
+    table.documents_table thead, table.documents_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.documents_table tbody {
+        overflow: auto;
+        height: 380px;
+    }
+    table.documents_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+
+.documents_table_row {
+    color: #777777;
+}
+
+.patient_documents_panel {
+    border-color: #428bca;
+}
+    .patient_documents_panel > .panel-heading {
+        border-bottom-color: #777777;
+        background-color: white; 
+        color: #777777;
+    } 
+        .patient_documents_panel > .panel-heading > h3 {
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+.Document_Clicked, .Document_Clicked:hover {
+    color: white !important;
+    background-color: #428bca !important;
+}

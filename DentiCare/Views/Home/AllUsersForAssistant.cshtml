@@ -1,0 +1,59 @@
+﻿@model DentiCare.Models.Admin.DisplayUsersViewModel
+
+@{
+    ViewBag.Title = "Baza uzytkownikow";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Home/Home.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="panel panel-default col-md-5 users_panel">
+        @Html.Partial("_UsersList", Model.UserViews)
+    </div>
+
+    <div id="div_user_details" class="panel panel-default col-md-6">
+        @Html.Partial("_UserDetails", Model.Details)
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        TableHoverUsers();
+    });
+
+    function TableHoverUsers() {
+        $(".users_table .users_table_row").on("click", function () {
+            var hasClass = $(this).hasClass("Row_Clicked");
+            if (!hasClass) {
+                $('.Row_Clicked').each(function () {
+                    $(this).removeClass('Row_Clicked');
+                });
+                $(this).addClass('Row_Clicked');
+
+                var userID = $(".Row_Clicked").find("#userID").attr('value');
+
+                if (userID !== undefined) {
+                    $.ajax({
+                        url: '@Url.Action("ShowUserDetails", "Home")',
+                        type: "GET",
+                        cache: false,
+                        contentType: "application/html, charset=utf-8",
+                        dataType: "html",
+                        data: { Id: userID },
+                        success: function (result) {
+                            $('#div_user_details').html(result);
+                        },
+                        beforeSend: function () {
+                            $("#loading_modal").modal('show');
+                        },
+                        complete: function () {
+                            $("#loading_modal").modal('hide');
+                        }
+                    });
+                }
+            }
+        });
+    }
+</script>
+

@@ -1,0 +1,92 @@
+﻿@model DentiCare.Models.Schedules.ScheduleModel
+
+@{
+    ViewBag.Title = "Wprowadz grafik";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Schedules/Schedules.css" rel="stylesheet" />
+
+<div class="container">
+    <h1 class="text-center text-primary col-md-12 main_header">Ustaw grafik na @Model.Date.ToShortDateString()</h1>
+
+    <div class="details_panel">
+        @using (Html.BeginForm("EnterSchedule", "Schedules", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.HiddenFor(m => m.Date)
+
+            <div class="btn-group col-md-6 col-md-offset-3 text-center" data-toggle="buttons">
+                <label class="dayOn_label btn btn-primary btn-lg col-md-6">
+                    <input type="radio" /> Pracuję
+                </label>
+                <label class="dayOff_label btn btn-success btn-lg col-md-6">
+                    <input id="DayOff" name="DayOff" type="radio" value="true" @(Model.DayOff ? "checked=\"checked\"" : "") /> Wolne
+                </label>
+            </div>
+
+            <div id="div_working" class="panel panel-default col-md-6 col-md-offset-3 panel-primary" style="margin-top: 30px;">
+                <div class="panel-heading text-center">
+                    <h2 class="text-primary">Godziny pracy</h2>
+                </div>
+                <div class="panel-body text-primary">
+                    <div class="form-group col-md-6 text-center">
+                        @Html.LabelFor(m => m.HourFrom, new { @class = "control-label col-md-12" })
+                        <div class="col-md-8 col-md-offset-2">
+                            @Html.DropDownListFor(m => m.HourFrom, new SelectList(Model.HoursFrom, "Key", "Value", 8), new { @class = "form-control text-center text-primary" })
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6 text-center">
+                        @Html.LabelFor(m => m.HourTo, new { @class = "control-label col-md-12" })
+                        <div class="col-md-8 col-md-offset-2">
+                            @Html.DropDownListFor(m => m.HourTo, new SelectList(Model.HoursTo, "Key", "Value", 16), new { @class = "form-control text-center text-primary" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*<div class="col-md-5 col-md-offset-2" style="margin-top: 60px;">
+                <div data-toggle="buttons" class="form-group">
+                    <label class="dayOff_label btn btn-warning text-primary btn-lg col-md-6 col-md-offset-3">
+                        <input id="DayOff" name="DayOff" type="checkbox" value="true" @(Model.DayOff ? "checked=\"checked\"" : "")  class="form-control" />
+                        <span id="dayOff_text">Wolne</span>
+                    </label>
+                </div>
+            </div>*@
+            
+            <div class="form-group">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <button id="submit_btn" type="submit" class="btn btn-default btn-lg tooltipButton" style="margin-top: 10px;"
+                            data-placement="bottom" title="Wprowadź grafik dzienny">
+                        <span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("tooltipButton").tooltip();
+        $("#div_working").css('visibility', 'hidden');
+        $("#submit_btn").prop('disabled', true);
+
+        $(".dayOff_label").on('click', function () {
+            $("#div_working").css('visibility', 'hidden');
+            $("#submit_btn").prop('disabled', false);
+
+            $("#submit_btn").addClass("btn-success");
+            $("#submit_btn").removeClass("btn-primary");
+            $("#submit_btn").removeClass("btn-default");
+        });
+
+        $(".dayOn_label").on('click', function () {
+            $("#div_working").css('visibility', 'visible');
+            $("#submit_btn").prop('disabled', false);
+
+            $("#submit_btn").addClass("btn-primary");
+            $("#submit_btn").removeClass("btn-success");
+            $("#submit_btn").removeClass("btn-default");
+        });
+    });
+</script>

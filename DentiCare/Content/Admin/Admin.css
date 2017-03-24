@@ -1,0 +1,135 @@
+﻿/*-----------------------------------------------------------------
+--------------------- Admin\Index ---------------------------------
+-----------------------------------------------------------------*/
+
+.admin_users_panel {
+    border-color: #428bca;
+}
+    .admin_users_panel > .panel-heading {
+        border-bottom-color: #428bca;
+        background-color: white; 
+        color: #777777;
+    } 
+        .admin_users_panel > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+#users_admin_table {
+    border-color: #428bca;
+}
+    #users_admin_table > thead > tr > th {
+        border-bottom-color: #428bca; 
+        border-right-color: #428bca;
+    }
+
+.users_table_row {
+    color: #777777;
+}
+
+table.users_table {
+        border-color: #428bca;
+        color: #428bca;
+        display: table;
+        width: 100%;
+    }
+    table.users_table thead, table.users_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.users_table tbody {
+        overflow: auto;
+        height: 745px;
+    }
+    table.users_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+
+/* partial */
+
+#div_user_details {
+    margin-left: 10px;
+    border-color: #428bca;
+}
+    #div_user_details > .panel-heading {
+        background-color: white; 
+        color: #777777;
+        border-bottom-color: #777777;
+    }
+        #div_user_details > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+    #div_user_details > .panel-body > .panel-heading {
+        color: #428bca;
+        border-bottom-color: #777777;
+    }
+
+.admin_div_user_buttons {
+    margin-top: 10px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.admin_div_roles_buttons {
+    margin-top: 10px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/*-----------------------------------------------------------------
+--------------------- Admin\Treatments ----------------------------
+-----------------------------------------------------------------*/
+
+.admin_treatments_panel {
+    border-color: #428bca;
+}
+    .admin_treatments_panel > .panel-heading {
+        border-bottom-color: #777777;
+        background-color: white; 
+        color: #777777;
+    } 
+        .admin_treatments_panel > .panel-heading > h3 {
+            font-weight: 600;
+        }
+
+#treatments_admin_table {
+    margin-top: 15px;
+    border-color: #428bca;
+}
+    #treatments_admin_table > thead > tr > th {
+        border-bottom-color: #428bca; 
+        border-right-color: #428bca;
+    }
+
+table.treatments_table {
+        border-color: #428bca;
+        color: #428bca;
+        display: table;
+        width: 100%;
+    }
+    table.treatments_table thead, table.treatments_table tbody {
+        float: left;
+        width: 100%;
+    }
+    table.treatments_table tbody {
+        overflow: auto;
+        height: 380px;
+    }
+    table.treatments_table tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+
+.treatments_table_row {
+    color: #777777;
+}
+
+.admin_div_treatment_buttons {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-right: 0;
+    padding-left: 0;
+}
